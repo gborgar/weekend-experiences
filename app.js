@@ -10,7 +10,7 @@ const app = express();
 /** Configs */
 require("./config/hbs.config");
 require("./config/db.config");
-const { session, loadUser } = require('./config/session.config');
+//const { session, loadUser } = require('./config/session.config');
 
 app.set("views", `${__dirname}/views`);
 app.set("view engine", "hbs");
@@ -18,8 +18,8 @@ app.set("view engine", "hbs");
 /** Middlewares */
 app.use(express.urlencoded({ extended: false }));
 app.use(logger("dev"));
-app.use(session);
-app.use(loadUser);
+//app.use(session);
+//app.use(loadUser);
 
 const routes = require("./config/routes.config");
 app.use("/", routes);
