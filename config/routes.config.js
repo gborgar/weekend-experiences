@@ -12,6 +12,8 @@ router.get("/", misc.home);
 router.post("/travels", travels.doCreate)
 router.get("/travels", travels.allTravels)
 
+router.get("/users", users.doCreate)
+
 
 
 
