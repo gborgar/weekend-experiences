@@ -1,8 +1,46 @@
-<nav class="navbar navbar-light bg-light">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid display-flex">
     <a class="navbar-brand" href="#">
-      <img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-      Bootstrap
+      <img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
     </a>
+
+    <a class="navbar-brand" href="/">W-Experiences</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="navbar-nav" style="flex-grow: 1; justify-content: space-between;">
+        <div class="d-flex">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/views/gift-card/giftMain.hbs">Tarjeta Regalo</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Experiences Packs
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Viaja por Europa</a></li>
+              <li><a class="dropdown-item" href="#">Viaja por España</a></li>
+            </ul>
+            
+          </li>
+        </div>
+
+        <div class="d-flex">
+          {{#if currentUser}}
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/profile">
+            <img  src="{{currentUser.avatar}}" style="width: 30px;"/>
+            {{ currentUser.email }}</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/logout"><i class="fa fa-sign-out"></i></a></li>
+          {{else}}
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/register">Register</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/login">Login</a></li>
+          {{/if}}
+        </div>
+      </ul>
+    </div>
   </div>
 </nav>

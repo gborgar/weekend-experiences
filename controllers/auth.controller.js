@@ -12,6 +12,7 @@ module.exports.doRegister = (req, res, next) => {
   console.log("body: ", req.body);
 
   function renderWithErrors(errors) {
+    console.log(errors);
     res.render("auth/register", {
       errors: errors,
       user: req.body,
@@ -46,6 +47,7 @@ module.exports.login = (req, res, next) => {
 };
 
 module.exports.verify = (req, res, next) => {
+  
   User.findByIdAndUpdate(req.params.id, { verified: true })
     .then((user) => {
       res.redirect("/login");
@@ -63,7 +65,7 @@ module.exports.doLogin = (req, res, next) => {
 
   const { email, password } = req.body;
 
-  User.findOne({ email, verified: true })
+  User.findOne({ email, verified: true }) 
     .then((user) => {
       if (!user) {
         renderWithErrors();
@@ -73,7 +75,7 @@ module.exports.doLogin = (req, res, next) => {
             renderWithErrors();
           } else {
             req.session.userId = user.id;
-            res.redirect("/users");
+            res.redirect("/profile");
           }
         });
       }
@@ -82,6 +84,7 @@ module.exports.doLogin = (req, res, next) => {
 };
 
 module.exports.logout = (req, res, next) => {
+  console.log("Estás fuera");
   req.session.destroy();
   res.redirect("/login");
 };
