@@ -1,1 +1,49 @@
-<h1>hola</h1>
+<div class="row justify-content-center">
+  <div class="col-12 col-sm-4">
+    <h4>Register</h4>
+    <form action="/register" method="post" enctype="multipart/form-data">
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <input type="text" class="form-control {{#if errors.name}}is-invalid{{/if}}" name="name" value="{{ user.name }}" placeholder="Type your name..." />
+        <div class="invalid-feedback">{{ errors.name }}</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control {{#if errors.email}}is-invalid{{/if}}" name="email" value="{{ user.email }}" placeholder="john.doe@example.org" />
+        <div class="invalid-feedback">{{ errors.email }}</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Interests</label>
+        <input type="text" class="form-control {{#if errors.interests}}is-invalid{{/if}}" name="interests" value="{{ user.interests }}" placeholder="Interests..." />
+        <div class="invalid-feedback">{{ errors.interests }}</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Avatar</label>
+        <input type="file" class="form-control {{#if errors.avatar}}is-invalid{{/if}}" name="avatar" placeholder="Type the url..." />
+        <div class="invalid-feedback">{{ errors.avatar }}</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control {{#if errors.password}}is-invalid{{/if}}" name="password" placeholder="Password..." />
+        <div class="invalid-feedback">{{ errors.password }}</div>
+      </div>
+
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Register</button>
+        <hr>
+        <a href="/login" class="btn btn-secondary btn-sm text-uppercase">Login</a>
+      </div>
+      
+    </form>
+  </div>
+</div>
