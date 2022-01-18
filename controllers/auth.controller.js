@@ -22,7 +22,7 @@ module.exports.doRegister = (req, res, next) => {
   User.findOne({ email: req.body.email })
     .then((user) => {
       if (!user) {
-        req.body.avatar = req.file.path;
+        
 
         return User.create(req.body).then((user) => {
           sendVerificationEmail(user);
@@ -75,7 +75,7 @@ module.exports.doLogin = (req, res, next) => {
             renderWithErrors();
           } else {
             req.session.userId = user.id;
-            res.redirect("/profile");
+            res.redirect("/");
           }
         });
       }

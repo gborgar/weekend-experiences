@@ -8,8 +8,9 @@ const secure = require("../middlewares/secure.mid");
 
 router.get("/", misc.home);
 
-router.post("/travels", travels.doCreate);
-router.get("/travels", travels.allTravels);
+router.post("/travels", secure.isAuthenticated, secure.isAdmin, travels.doCreate);
+router.get("/travels/create", secure.isAuthenticated, secure.isAdmin, travels.create);
+router.get("/travels", travels.list);
 
 router.get("/register", auth.register);
 router.post("/register", auth.doRegister);
@@ -17,7 +18,6 @@ router.post("/register", auth.doRegister);
 router.get("/login", auth.login);
 router.post("/login", auth.doLogin);
 router.get("/users/:id/verify", auth.verify);
-router.get("/profile", auth.doLogin);
 router.get("/logout", auth.logout);
 
 

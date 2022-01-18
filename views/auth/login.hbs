@@ -4,7 +4,7 @@
     <form action="/login" method="post">
 
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <label for="exampleInputEmail1" class="form-label">Email</label>
         <input type="email" class="form-control {{#if errors.email}}is-invalid{{/if}}" name="email" value="{{ user.email }}" placeholder="john.doe@example.org" />
         <div class="invalid-feedback">{{ errors.email }}</div>
       </div>
@@ -17,13 +17,13 @@
 
       <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        <label class="form-check-label" for="exampleCheck1">Clícame</label>
       </div>
       
       <div class="d-grid">
         <button type="submit" class="btn btn-primary">Login</button>
         <hr>
-        <a href="/register" class="btn btn-secondary btn-sm text-uppercase">Register</a>
+        <a href="/register" class="btn btn-secondary btn-sm text-uppercase">Registrate</a>
       </div>
 
     </form>

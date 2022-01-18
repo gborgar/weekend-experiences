@@ -14,15 +14,22 @@ module.exports.doCreate = (req, res, next) => {
     })
     .catch((error) => {
       console.log( error );
+      next(error);
     })
 };
 
-module.exports.allTravels = (req, res, next) => {
+module.exports.list = (req, res, next) => {
   Travel.find()
     .then((travels) => {
-      res.json(travels)
+      res.render("misc/home", { 
+        travels: travels
+      })
     })
     .catch((error) => {
       console.log(error)
     })
+};
+
+module.exports.create = (req, res, next) => {
+  res.render("travels/create")
 };
