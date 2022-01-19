@@ -1,1 +1,96 @@
-un formulario dpm
+<div class="row justify-content-center">
+  <div class="col-12 col-sm-4">
+    <h4>Crear Viaje</h4>
+    <form action="/travels" method="post">
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Destino</label><br>
+        <input type="radio" name="destination" value="national">
+        <label for="html">Nacionales</label><br>
+        <input type="radio" name="destination" value="europa">
+        <label for="css">Por Europa</label><br>
+        
+        <div class="invalid-feedback">{{ errors.name }}</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Título</label>
+        <input type="text" class="form-control" name="title" value="" placeholder="..." />
+        <div class="invalid-feedback">{{ errors.interests }}</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Imagen</label>
+        <input type="file" class="form-control {{#if errors.email}}is-invalid{{/if}}" name="image" value="{{ user.email }}" placeholder="..." />
+        <div class="invalid-feedback">{{ errors.email }}</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Precio</label>
+        <input type="number" class="form-control {{#if errors.password}}is-invalid{{/if}}" name="price" placeholder="" />
+        <div class="invalid-feedback">{{ errors.password }}</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Ciudad</label>
+        <input type="text" class="form-control {{#if errors.password}}is-invalid{{/if}}" name="location" placeholder="..." />
+        <div class="invalid-feedback">{{ errors.password }}</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Modo de transporte</label><br>
+        <input type="radio" name="mode" value="coche">
+        <label for="html">Coche</label><br>
+        <input type="radio" name="mode" value="avion">
+        <label for="css">Avión</label><br>
+        
+        <div class="invalid-feedback">{{ errors.name }}</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Descripción</label>
+        <input type="textarea" class="form-control {{#if errors.password}}is-invalid{{/if}}" name="description" placeholder="..." />
+        <div class="invalid-feedback">{{ errors.password }}</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="duration" class="form-label">Duración</label>
+        <input type="number" class="form-control {{#if errors.password}}is-invalid{{/if}}" name="duration" value="3" min="3" max="3"/>
+        <div class="invalid-feedback">{{ errors.password }}</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Key Words</label><br>
+          <input type="checkbox" name="forest" value="forest">
+          <label for="forest">Bosque</label><br>
+
+          <input type="checkbox" name="culture" value="culture">
+          <label for="culture">Cultural</label><br>
+
+          <input type="checkbox" name="guide" value="guide">
+          <label for="guide">Guía</label><br>
+
+          <input type="checkbox" name="food" value="food">
+          <label for="food">Gastronómico</label><br>
+
+          <input type="checkbox" name="sea" value="sea">
+          <label for="sea">Playa</label><br>
+
+          <input type="checkbox" name="romantic" value="romantic">
+          <label for="romantic">Romántico</label><br>
+        
+        <div class="invalid-feedback">{{ errors.password }}</div>
+      </div>
+
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Clícame</label>
+      </div>
+      
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary text-uppercase">Crear</button>
+      </div>
+      
+    </form>
+  </div>
+</div>
