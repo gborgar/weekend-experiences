@@ -5,17 +5,25 @@ const Travel = require("../models/travel.model");
 
 module.exports.doCreate = (req, res, next) => {
   const travel = req.body;
-  travel.keyWords = [travel.keyWords]
+  travel.image = req.file?.path;
+  travel.keyWords = travel.keyWords
+  console.log(req.body);
 
   Travel.create(travel)
     .then((travel) => {
       console.log( "Travel created", travel);
-      res.send('todo OK')
+      res.redirect("/");
     })
     .catch((error) => {
-      console.log( error );
-      next(error);
-    })
+      if (error instanceof mongoose.Error.ValidationError) {
+        res.render("travels/create", {
+          contact: req.body,
+          errors: error.errors,
+        });
+      } else {
+        next(error);
+      }
+    });
 };
 
 module.exports.list = (req, res, next) => {

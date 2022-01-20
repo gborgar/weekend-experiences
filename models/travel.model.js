@@ -4,8 +4,9 @@ const keywords = require('../data/keywords')
 
 const travelSchema = new Schema(
   {
-    destino: {
-      type: Boolean,
+    destination: {
+      type: String,
+      enum: ["national","europe"],
       required: true
     },
     title: {
@@ -24,7 +25,7 @@ const travelSchema = new Schema(
       required: true
     },
     tripMode: {
-      type: [String],
+      type: String,
       enum: ["car", "plane"],
       required: true
     },
@@ -37,8 +38,7 @@ const travelSchema = new Schema(
       default: 3
     },
     rating: {
-      type: Number,
-      required: true
+      type: Number
     },
     keyWords: {
       type: [String],

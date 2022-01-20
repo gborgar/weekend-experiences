@@ -17,7 +17,7 @@ app.set("views", `${__dirname}/views`);
 app.set("view engine", "hbs");
 
 /** Middlewares */
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(logger("dev"));
 app.use(session);
 app.use(loadUser);

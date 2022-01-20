@@ -1,8 +1,8 @@
 module.exports = [
-    'Forest',
-    'Culture',
-    'Guide',
-    'Food',
-    'Sea',
-    'Romantic'
+    'forest',
+    'culture',
+    'guide',
+    'food',
+    'sea',
+    'romantic'
 ]

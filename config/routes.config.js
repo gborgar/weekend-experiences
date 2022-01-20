@@ -4,11 +4,12 @@ const misc = require("../controllers/misc.controller");
 const travels = require("../controllers/travels.controller");
 const auth = require("../controllers/auth.controller");
 const secure = require("../middlewares/secure.mid");
+const multer = require("../config/multer.config");
 
 
 router.get("/", misc.home);
 
-router.post("/travels", secure.isAuthenticated, secure.isAdmin, travels.doCreate);
+router.post("/travels", secure.isAuthenticated, secure.isAdmin, multer.single("image"), travels.doCreate);
 router.get("/travels/create", secure.isAuthenticated, secure.isAdmin, travels.create);
 router.get("/travels", travels.list);
 
