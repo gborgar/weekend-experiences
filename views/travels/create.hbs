@@ -3,32 +3,15 @@
     <h4>Crear Viaje</h4>
     <form action="/travels" method="post" enctype="multipart/form-data">
 
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Destino</label><br>
-        <input type="checkbox" class="form-check-input is-invalid {{#if errors.destination}}is-invalid{{/if}}" name="destination" value="national">
+      <div class="form-check mb-3">
+        <label for="exampleInputEmail1" class="form-check-label">Destino</label><br>
+        <input type="radio" class="form-check-input {{#if errors.destination}}is-invalid{{/if}}" name="destination" value="national">
         <label for="html">Nacionales</label><br>
-        <input type="checkbox" class="form-control {{#if errors.destination}}is-invalid{{/if}}" name="destination" value="europe">
+        <input type="radio" class="form-check-input {{#if errors.destination}}is-invalid{{/if}}" name="destination" value="europe">
         <label for="css">Por Europa</label><br>
         
         <div class="invalid-feedback">{{ errors.destination }}</div>
       </div>
-
-
-
-
-      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
-      <label class="form-check-label" for="invalidCheck3">
-        Agree to terms and conditions
-      </label>
-      <div id="invalidCheck3Feedback" class="invalid-feedback">
-        You must agree before submitting.
-      </div>
-
-
-
-
-
-
 
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Título</label>
@@ -54,11 +37,11 @@
         <div class="invalid-feedback">{{ errors.location }}</div>
       </div>
 
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Modo de transporte</label><br>
-        <input type="radio" class="form-control {{#if errors.tripMode}}is-invalid{{/if}}" name="tripMode" value="car">
+      <div class="form-check mb-3">
+        <label for="exampleInputEmail1" class="form-check-label">Modo de transporte</label><br>
+        <input type="radio" class="form-check-input {{#if errors.tripMode}}is-invalid{{/if}}" name="tripMode" value="car">
         <label for="html">Coche</label><br>
-        <input type="radio" class="form-control {{#if errors.tripMode}}is-invalid{{/if}}" name="tripMode" value="plane">
+        <input type="radio" class="form-check-input {{#if errors.tripMode}}is-invalid{{/if}}" name="tripMode" value="plane">
         <label for="css">Avión</label><br>
         
         <div class="invalid-feedback">{{ errors.tripMode }}</div>
@@ -77,33 +60,34 @@
       </div>
 
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Key Words</label><br>
-          <input type="checkbox" class="form-control {{#if errors.keyWords}}is-invalid{{/if}}" name="keyWords" value="forest">
+        <label for="exampleInputPassword1" class="form-check-label">Key Words</label><br>
+          <input type="checkbox" class="form-check-input {{#if errors.keyWords}}is-invalid{{/if}}" name="keyWords" value="forest">
           <label for="forest">Bosque</label><br>
 
-          <input type="checkbox" name="keyWords" value="culture">
+          <input type="checkbox" class="form-check-input {{#if errors.keyWords}}is-invalid{{/if}}" name="keyWords" value="culture">
           <label for="culture">Cultural</label><br>
 
-          <input type="checkbox" name="keyWords" value="guide">
+          <input type="checkbox" class="form-check-input {{#if errors.keyWords}}is-invalid{{/if}}" name="keyWords" value="guide">
           <label for="guide">Guía</label><br>
 
-          <input type="checkbox" name="keyWords" value="food">
+          <input type="checkbox" class="form-check-input {{#if errors.keyWords}}is-invalid{{/if}}" name="keyWords" value="food">
           <label for="food">Gastronómico</label><br>
 
-          <input type="checkbox" name="keyWords" value="sea">
+          <input type="checkbox" class="form-check-input {{#if errors.keyWords}}is-invalid{{/if}}" name="keyWords" value="sea">
           <label for="sea">Playa</label><br>
 
-          <input type="checkbox" name="keyWords" value="romantic">
+          <input type="checkbox" class="form-check-input {{#if errors.keyWords}}is-invalid{{/if}}" name="keyWords" value="romantic">
           <label for="romantic">Romántico</label><br>
         
         <div class="invalid-feedback">{{ errors.keyWords }}</div>
       </div>
 
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Clícame</label>
+      <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+        <label class="form-check-label" for="validationFormCheck1">Clícame</label>
+        <div class="invalid-feedback">Debes hacer click</div>
       </div>
-      
+
       <div class="d-grid">
         <button type="submit" class="btn btn-primary text-uppercase">Crear</button>
       </div>
