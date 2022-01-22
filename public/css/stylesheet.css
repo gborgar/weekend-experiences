@@ -1,0 +1,11 @@
+.travel-card-image {
+  height: 276px;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
+}
+
+.card {
+  max-height: 278px;
+  font-size: 10px;
+}

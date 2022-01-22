@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const express = require("express");
 const logger = require("morgan");
+const path = require("path");
 const mongoose = require('mongoose');
 const createError = require('http-errors');
 
@@ -17,6 +18,7 @@ app.set("view engine", "hbs");
 
 /** Middlewares */
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')))
 app.use(logger("dev"));
 app.use(session);
 app.use(loadUser);
