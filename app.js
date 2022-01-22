@@ -4,7 +4,6 @@ const express = require("express");
 const logger = require("morgan");
 const mongoose = require('mongoose');
 const createError = require('http-errors');
-const expressSession = require("express-session");
 
 const app = express();
 
