@@ -1,5 +1,5 @@
 <div class="row justify-content-center">
-  <div class="col-12 col-sm-4">
+  <div class="col-12 col-sm-8">
     <h4>Crear Viaje</h4>
     <form action="/travels" method="post" enctype="multipart/form-data">
 
@@ -55,7 +55,7 @@
 
       <div class="mb-3">
         <label for="duration" class="form-label">Duración</label>
-        <input type="number" class="form-control {{#if errors.duration}}is-invalid{{/if}}" name="duration" value="{{ travel.duration}}" disabled="" />
+        <input type="number" class="form-control {{#if errors.duration}}is-invalid{{/if}}" name="duration" value="3" disabled="" />
         <div class="invalid-feedback">{{ errors.duration }}</div>
       </div>
 
