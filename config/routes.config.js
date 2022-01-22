@@ -11,7 +11,8 @@ router.get("/", misc.home);
 
 router.post("/travels", secure.isAuthenticated, secure.isAdmin, multer.single("image"), travels.doCreate);
 router.get("/travels/create", secure.isAuthenticated, secure.isAdmin, travels.create);
-router.get("/travels", travels.list);
+router.get("/travels/list", travels.list);
+
 
 router.get("/register", auth.register);
 router.post("/register", auth.doRegister);

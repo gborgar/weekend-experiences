@@ -26,7 +26,7 @@ const travelSchema = new Schema(
     },
     tripMode: {
       type: String,
-      enum: ["car", "plane"],
+      enum: ["coche", "avión"],
       required: true
     },
     description: {

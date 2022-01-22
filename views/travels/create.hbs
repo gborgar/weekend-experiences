@@ -39,9 +39,9 @@
 
       <div class="form-check mb-3">
         <label for="exampleInputEmail1" class="form-check-label">Modo de transporte</label><br>
-        <input type="radio" class="form-check-input {{#if errors.tripMode}}is-invalid{{/if}}" name="tripMode" value="car">
+        <input type="radio" class="form-check-input {{#if errors.tripMode}}is-invalid{{/if}}" name="tripMode" value="coche">
         <label for="html">Coche</label><br>
-        <input type="radio" class="form-check-input {{#if errors.tripMode}}is-invalid{{/if}}" name="tripMode" value="plane">
+        <input type="radio" class="form-check-input {{#if errors.tripMode}}is-invalid{{/if}}" name="tripMode" value="avión">
         <label for="css">Avión</label><br>
         
         <div class="invalid-feedback">{{ errors.tripMode }}</div>

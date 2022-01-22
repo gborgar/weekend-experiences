@@ -12,7 +12,7 @@ module.exports.doCreate = (req, res, next) => {
   Travel.create(travel)
     .then((travel) => {
       console.log( "Travel created", travel);
-      res.redirect("/");
+      res.redirect("travels/list");
     })
     .catch((error) => {
       if (error instanceof mongoose.Error.ValidationError) {
@@ -29,7 +29,7 @@ module.exports.doCreate = (req, res, next) => {
 module.exports.list = (req, res, next) => {
   Travel.find()
     .then((travels) => {
-      res.render("misc/home", { 
+      res.render("travels/list", { 
         travels: travels
       })
     })
