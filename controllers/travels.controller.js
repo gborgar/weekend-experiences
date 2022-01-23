@@ -41,3 +41,18 @@ module.exports.list = (req, res, next) => {
 module.exports.create = (req, res, next) => {
   res.render("travels/create")
 };
+
+module.exports.detail = (req, res, next) => {
+  const query = { _id: req.params.id };
+
+  Travel.findOne(query)
+    .then((travel) => {
+      if(travel) {
+        return res.render("travels/detail", {travel});
+      } else {
+        next(createError(404, "Travel not found"));
+      }
+    })
+    .catch((error) => next(error));
+};
+

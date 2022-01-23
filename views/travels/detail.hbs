@@ -1,0 +1,15 @@
+<div class="card mb-3">  
+  <img src="{{travel.image}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{travel.title}}</h5>
+    <p class="card-text">{{travel.description}}</p>
+    <ul>
+      <li>Viaje en: {{travel.tripMode}}</li>
+      <li>{{travel.duration}} días</li>
+      <li>{{#setKeyWords travel.keyWords}}{{/setKeyWords}}</li>
+    </ul>
+    <h6 class="card-title">{{travel.price}}€</h6>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <a href="/travels/list" class="btn btn-secondary btn-sm text-uppercase">Volver a la lista</a>
+  </div>
+</div>
