@@ -5,6 +5,7 @@ const travels = require("../controllers/travels.controller");
 const auth = require("../controllers/auth.controller");
 const secure = require("../middlewares/secure.mid");
 const multer = require("../config/multer.config");
+const reservations = require("../controllers/reservations.controller");
 
 
 router.get("/", misc.home);
@@ -15,6 +16,8 @@ router.get("/travels/list", travels.list);
 router.get("/travels/:id/detail", travels.detail);
 router.get("/travels/reserva", travels.reserva);
 router.get("/travels/discart", travels.discart);
+
+router.get("/travels-finder",reservations.doTravelFind);
 
 
 router.get("/register", auth.register);
