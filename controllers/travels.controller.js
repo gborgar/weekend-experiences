@@ -56,3 +56,10 @@ module.exports.detail = (req, res, next) => {
     .catch((error) => next(error));
 };
 
+module.exports.reserva = (req, res, next) => {
+  res.render("travels/reserva")
+};
+
+module.exports.discart = (req, res, next) => {
+  res.render("travels/discart")
+};

@@ -9,3 +9,84 @@
   max-height: 278px;
   font-size: 10px;
 }
+
+
+.carousel-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+.carousel-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#carouselExampleIndicators {
+  background-image: url(https://cdn.pixabay.com/photo/2016/11/16/05/11/man-1828202_1280.jpg);
+  height: 400px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
+}
+ ul {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+
+ }
+
+article.contenido-regalo {
+  background-image: url(https://cdn.pixabay.com/photo/2016/11/16/05/11/man-1828202_1280.jpg);
+}
+
+main.home {
+  border-radius: 0.2em;
+  display: inline-block;
+  max-height: 500px;
+  padding: 20px 5% 30px 5%;
+  width: 100%;
+  background-image: url(https://cdn.pixabay.com/photo/2016/11/16/05/11/man-1828202_1280.jpg);
+}
+
+
+form.form_reservas {
+  background: rgba(255,255,255,.85);
+  border-radius: 0.2em;
+  display: flex;
+  max-height: 165px;
+  padding: 20px 5% 30px 5%;
+  width: 100%;
+}
+
+.cada-linea {
+  border: 1px solid #ddd;
+}
+
+.conImgFomdo {
+  border: 1px solid #ddd; 
+
+}
+
+
+
+<!--DESCARTAR DESTINOS-->
+
+.listado-viajes {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  height:250px;
+  
+}
+button, input, optgroup, select, textarea {
+  margin: 20px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
