@@ -1,3 +1,7 @@
+body {
+  background-image: url("/img/bgimage.jpg");
+}
+
 .travel-card-image {
   height: 276px;
   background-repeat: no-repeat;
