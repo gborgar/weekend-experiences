@@ -1,98 +1,77 @@
-<div class="row col-12">
-  {{#each travels as |travel|}}
-  <div class="col-4">
+<header class="home">
+  <div class="container">
+    <form class="panel" method="GET" action="/travels-finder">
+      <div class="row gx-5 gy-2">
+        <div class="col">
+          <select id="destination" class="form-select" aria-label="Destino" name="destination">
+            <option value="europe">Europa</option>
+            <option value="national">España</option>
+          </select>
+        </div>
 
-    {{travel.title}}
+        <div class="col">
+          <select id="airport" class="form-select" aria-label="Destino" name="airport">
+            <option value="BCN" selected>Barcelona (BCN)</option>
+            <option value="2">Madrid</option>
+            <option value="4">Palma Mallorca</option>
+            <option value="9">Alicante</option>
+            <option value="8">Málaga</option>
+            <option value="10">Sevilla</option>
+            <option value="12">Oporto</option>
+            <option value="7">Bilbao</option>
+            <option value="3">Valencia</option>
+          </select>
+        </div>
 
-  </div>
-
-  {{/each}}
-
-  <main class="home">
-    <div class="continente index">
-      <div class="conImgFondo style:background-image:"
-        url:https://as2.ftcdn.net/v2/jpg/02/99/10/57/1000_F_299105798_V52AVa1Dq5B8PLN9oiTnUPh8zMLw9wrV.jpg">
-        <!--TU RESERVA-->
-        <div class="con-reservas-cupones">
-          <div class="reservas">
-            <!--<h3 class="oculto">RESERVAR UN VIAJE MR WEEKEND</h3>-->
-            <form class="form_reservas col-4" method="get" action="/travels-finder">
-             
-              <!--<div class="cada-paso">
-                <div class="con-regalo">
-                  <span>PARA QUIÉN</span>
-                  <div class="radio">
-                    <input type="radio" name="regalo" id="paraQuien-0" value="para-mi" checked>
-                    <label for="paraQuien-0" class="para-mi">Para mí</label>
-                    <input type="radio" name="regalo" id="paraQuien-1" value="regalo">
-                    <label class="regalo" for="paraQuien-1"><i class="icon-regalo"></i>Regalo</label>
-                  </div>
-                </div>
-                <p class="leyenda mt">
-                  <a class="tooltip" title="Aquí puedes elegir si el viaje es para ti o si es un regalo"
-                    href="https://MRWEEKEND.com/como-regalar-un-MRWEEKEND">
-                  </a>
-                </p>
-              </div>-->
-
-              <div class="cada-paso">
-                <label for="tipo_destino">
-                  <span>TIPO DE DESTINO</span>
-                  <div class="select">
-                    <select id="tipo_destino" name="tipo_destino">
-                      <option value="europe" selected>Europa</option>
-                      <option value="national">España</option>
-                    </select>
-                  </div>
-                </label>
-              </div>
-
-              <div class="cada-paso">
-                <label for="id_origen">
-                  <span>AEROPUERTO DE SALIDA</span>
-                  <div class="select">
-                    <select id="id_origen" name="id_origen">
-                      <option value="1" selected>Barcelona</option>
-                      <option value="2">Madrid</option>
-                      <option value="4">Palma Mallorca</option>
-                      <option value="9">Alicante</option>
-                      <option value="8">Málaga</option>
-                      <option value="10">Sevilla</option>
-                      <option value="12">Oporto</option>
-                      <option value="7">Bilbao</option>
-                      <option value="3">Valencia</option>
-                    </select>
-                  </div>
-                </label>
-              </div>
-
-              <div class="cada-paso">
-                <label for="num_viajeros">
-                  <span>CUÁNTOS VIAJAMOS</span>
-                  <div class="viajeros">
-                    <input id="viajeros" class="min-1 max-10" type="number" min="1" max="10" name="viajeros" />
-                    <input id="num_viajeros" type="hidden" value="2" name="num_viajeros" />
-                </label>
-              </div>
-              </div>
-
-              <div class="cada-paso">
-              <label for="start">
-                 <span>FECHA</span>
-                <input type="date" id="start" name="date" value="2022-01-22" min="2022-01-01" max="2023-12-31">
-              </label>
-              </div>
-             
-              <a href="/travels-finder">
-                <input type="button" value="RESERVA YA" name="submit" class="boton reserva" < />
-              </a>
-           </form>   
+        <div class="col">
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa fa-users fa-fw"></i></span>
+            <input id="travelers" type="number" min="1" max="10" class="form-control" placeholder="Numbero de viajeros"
+              aria-label="Username">
           </div>
         </div>
+
+        <div class="col">
+          <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping"><i class="fa fa-calendar-o fa-fw"></i></span>
+            <input name="date" type="date" class="form-control" placeholder="Username" value="2022-01-22"
+              min="2022-01-01" max="2023-12-31">
+          </div>
+        </div>
+
+        <div class="col">
+          <button class="btn btn-secondary text-uppercase" type="submit">Reservar</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="d-flex flex-column card-services">
+        <img src="https://drumwit.com/web/images/iconos/qi-billetes.png" alt="">
+        <h3>¿QUÉ INCLUYE?</h3>
+        <p>Viaja cómodamente</p>
       </div>
     </div>
-
-</main>
+    <div class="col">
+      <div class="d-flex flex-column">
+        <img src="https://drumwit.com/web/images/iconos/qi-billetes.png" alt="">
+        <h3>¿QUÉ INCLUYE?</h3>
+        <p>Viaja cómodamente</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="d-flex flex-column">
+        <img src="https://drumwit.com/web/images/iconos/qi-billetes.png" alt="">
+        <h3>¿QUÉ INCLUYE?</h3>
+        <p>Viaja cómodamente</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 
