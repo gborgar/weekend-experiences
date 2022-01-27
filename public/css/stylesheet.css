@@ -53,7 +53,7 @@ main.home {
 }
 
 
-form.form_reservas {
+.form_reservas {
   background: rgba(255,255,255,.85);
   border-radius: 0.2em;
   display: flex;
@@ -91,9 +91,177 @@ form.form_reservas {
   width: 325px;
   z-index: 11;
 }
+ .con-regalo, .form_reservas label span{
+  display: inline-block;
+  color: #279fb0;
+  font-size: 1em;
+  font-weight: 500;
+  padding-bottom: 0.5em;
+  text-align: left;
+  width: 100%;
+}
+blockquote, body, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {
+  margin: 0;
+  padding: 0;
+}
+
+.reservas .cada-paso {
+    padding-right: 1%;
+}
+
+.cada-paso {
+    float: left;
+    min-height: 116px;
+    padding: 10px 20px 20px 20px;
+    text-align: left;
+    position: relative;
+    vertical-align: middle;
+    z-index: 1;
+}
+blockquote, body, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+*, ::after, ::before {
+    box-sizing: inherit;
+}
 
 
+.continente.index, .continente.index-log {
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin-top: 62px;
+}
+body, html {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #111;
+    font-family: Montserrat,sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+::selection {
+    background: #279fb0;
+    text-shadow: none;
+    color: #fff;
+}
+.form_reservas {
+  background: rgb(243 236 236 / 44%)  no-repeat scroll 98% center;
+  color: #000;
+  font-family: Montserrat,sans-serif;
+  font-weight: 500;
+  min-height: 54px;
+  max-width: 100%;
+  padding: 0;
+  text-rendering: optimizelegibility;
+  width: 100%;
+}
+.select {
+  background: #fff url(../images/iconos/flecha.png) no-repeat 98% center;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+}
+.viajeros {
+  background: #fff url(../images/iconos/flecha.png) no-repeat 98% center;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+}
 
+.form_reservas input.boton {
+  background-color: #f3ac2b;
+  border: 3px solid #fff;
+  z-index: 100;
+  width:auto;
+}
+#canjear_cupon input#boton_canjear_cupon, #canjear_puntos input#boton_canjear_puntos, .contenido-regalo .boton, .datosReserva input.boton, .datosReserva input.boton-descarga, .experiencias .boton,  .suscribete button.boton, a.boton, input#buscarReserva[type=submit], input.boton, input.seleccion-viajeros {
+  cursor: pointer;
+  background-image: url(../images/avion-25.svg);
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-color: #279fb0;
+  background-position: right;
+  border: 3px solid #279fb0;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  line-height: 38px;
+  font-size: 1.1em;
+  min-height: 38px;
+  padding: 0;
+  text-transform: uppercase;
+  transition: all .3s ease 0s;
+  width: 100%;
+  z-index: 0;
+}
+button, html input[type=button], input[type=reset], input[type=submit] {
+  border: 0;
+  cursor: pointer;
+  -webkit-border-radius: 0px;
+  -webkit-appearance: textarea;
+}
+input[type="submit" i] {
+  appearance: auto;
+  user-select: none;
+  white-space: pre;
+  align-items: flex-start;
+  text-align: center;
+  cursor: default;
+  box-sizing: border-box;
+  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+  color: -internal-light-dark(black, white);
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+}
+
+input {
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+  margin: 0em;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+}
+select#tipo_destino {
+
+  outline:none;
+}
 
 
 
@@ -112,6 +280,7 @@ button, input, optgroup, select, textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  border:none;
 }
 
 <!--RESERVA-->
