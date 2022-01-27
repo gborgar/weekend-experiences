@@ -58,8 +58,12 @@ form.form_reservas {
   border-radius: 0.2em;
   display: flex;
   max-height: 165px;
-  padding: 20px 5% 30px 5%;
+  padding: 30px 30px 10px;
   width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
 }
 
 .cada-linea {
@@ -112,3 +116,112 @@ button, input, optgroup, select, textarea {
 
 <!--RESERVA-->
 
+#datos_experiencia h3, .interiores #carro-final h2, .interiores .r-hora h4, .interiores h3 {
+  color: #279fb0;
+  font-size: 1.3em;
+  font-weight: 500;
+  line-height: 2em;
+  margin-bottom: 0.5em;
+  padding: 0;
+  text-align: left;
+}
+
+.datosReserva .untercio, .form_contacto label.untercio {
+  float: left;
+  margin: 0 2% 15px 0;
+  width: 32%;
+}
+
+#datos-pago, #datosComentarios, #datosEnvio, #datosViajes, .datosCupon, .datosPuntos, .datosReserva, .tuReserva {
+  display: inline-block;
+  font-size: 1em;
+  margin-bottom: 25px;
+  width: 100%;
+}
+.interiores {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+::selection {
+  background: #279fb0;
+  text-shadow: none;
+  color: #fff;
+}
+
+.datosReserva label {
+  float: left;
+  margin: 0 2% 0 0;
+  width: 100%;
+}
+
+#datosComentarios textarea, #datosEnvio input, #datosFactura input, #datosViajes textarea, .datosCupon input, .datosPuntos input, .datosReserva input, .form_comprar input, .form_contacto input, .form_contacto textarea, .form_tureserva input {
+  background-color: #fff;
+  background-image: none;
+  border: solid 2px #279fb0;
+  display: inline-block;
+  font-family: Montserrat,sans-serif;
+  font-size: .95em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  max-width: 100%;
+  padding: 10px;
+  text-rendering: optimizelegibility;
+  width: 100%;
+}
+blockquote, body, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {
+  margin: 0;
+  padding: 0;
+}
+
+#datosViajes .radio {
+  background: #fff;
+  float: left;
+  padding: 0;
+  margin: 0 0 1em 1em;
+  width: auto;
+}
+
+#confirmar_compra .radio input[type=radio]:checked+label, .form_registro .radio input[type=radio]:checked+label {
+  border: 2px solid #f3ac2c;
+  padding: 5px 15px;
+  background: #f3ac2c;
+  color: #fff;
+}
+#confirmar_compra .radio label {
+  background: #279fb0;
+  border: 2px solid #279fb0;
+  color: #fff;
+  font-size: 1em;
+  float: left;
+  margin-right: 1em;
+  width: auto;
+}
+#confirmar_compra .radio label, .form_registro .radio label {
+  background: #279fb0;
+  border-radius: 4px;
+  border: 2px solid #279fb0;
+  cursor: pointer;
+  color: #fff;
+  display: inline-block;
+  font-size: .9em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  position: relative;
+  padding: 5px 15px;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  text-align: left;
+  width: 33.1%;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}

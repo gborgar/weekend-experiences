@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row col-12">
   {{#each travels as |travel|}}
   <div class="col-4">
 
@@ -9,21 +9,21 @@
   {{/each}}
 
   <main class="home">
-    <div class="continente  index col-12">
-      <div class="conImgFondo style:background-image:" url:
-        https://as2.ftcdn.net/v2/jpg/02/99/10/57/1000_F_299105798_V52AVa1Dq5B8PLN9oiTnUPh8zMLw9wrV.jpg">
+    <div class="continente index">
+      <div class="conImgFondo style:background-image:"
+        url:https://as2.ftcdn.net/v2/jpg/02/99/10/57/1000_F_299105798_V52AVa1Dq5B8PLN9oiTnUPh8zMLw9wrV.jpg">
         <!--TU RESERVA-->
         <div class="con-reservas-cupones">
           <div class="reservas">
-            <h3 class="oculto">RESERVAR UN VIAJE MR WEEKEND</h3>
-            <form class="form_reservas col-8" method="get" action="/travels-finder"> 
+            <!--<h3 class="oculto">RESERVAR UN VIAJE MR WEEKEND</h3>-->
+            <form class="form_reservas col-6" method="get" action="/travels-finder">
               <div class="cada-paso">
                 <div class="con-regalo">
                   <span>PARA QUIÉN</span>
                   <div class="radio">
-                    <input type="radio" name="regalo" id="paraQuien-0" value="0" checked>
+                    <input type="radio" name="regalo" id="paraQuien-0" value="para-mi" checked>
                     <label for="paraQuien-0" class="para-mi">Para mí</label>
-                    <input type="radio" name="regalo" id="paraQuien-1" value="1">
+                    <input type="radio" name="regalo" id="paraQuien-1" value="regalo">
                     <label class="regalo" for="paraQuien-1"><i class="icon-regalo"></i>Regalo</label>
                   </div>
                 </div>
@@ -44,6 +44,7 @@
                   </div>
                 </label>
               </div>
+
               <div class="cada-paso">
                 <label for="id_origen">
                   <span>AEROPUERTO DE SALIDA</span>
@@ -62,200 +63,141 @@
                   </div>
                 </label>
               </div>
+
               <div class="cada-paso">
-                <div class="seleccionar"></div>
                 <label for="num_viajeros">
                   <span>CUÁNTOS VIAJAMOS</span>
                   <div class="viajeros">
-
-                    <input id="viajeros" class="flecha-viajeros-down" type="text" value="2 personas" name="viajeros" />
+                    <input id="viajeros" class="min-1 max-10" type="number" min="1" max="10" name="viajeros" />
                     <input id="num_viajeros" type="hidden" value="2" name="num_viajeros" />
-                    <input id="num_viajeros_adultos" type="hidden" value="2" name="num_viajeros_adultos" />
-                    <input id="num_viajeros_ninos" type="hidden" value="0" name="num_viajeros_ninos" />
-                    <input id="num_viajeros_bebes" type="hidden" value="0" name="num_viajeros_bebes" / </div>
                 </label>
-                <!--SELECCION DE PASAJEROS-->
-
-                <div class="seleccionar-viajeros" id="id-seleccionar-viajeros">
-                  <div class="con-viajeros">
-                    <div class="tipo-pasajeros">
-                      <div class="caja">
-                        <div class="cada-linea">
-                          <div class="categoria">
-                            <div class="titulo">Viajeros/Viajeras</div>
-                            <div class="subtitulo">Mayores de 16 años</div>
-                          </div>
-                          <div class="contador">
-                            <div class="con-contador">
-                              <button id="num_adultos_i" type="button" class="b_contador"
-                                onclick="actualizarNumAdultos(-1);">
-                                <span>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                    viewBox="-367 269 64 64">
-                                    <path
-                                      d="M-324.5 298.9h-21.1c-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2h21.1c.6 0 1.1-.3 1.5-.7.4-.4.7-.9.7-1.5 0-1.2-1-2.2-2.2-2.2z">
-                                    </path>
-                                    <path
-                                      d="M-335 277.1c-13.3 0-24 10.7-24 23.8 0 13.1 10.7 24 24 24 13.1 0 24-10.7 24-24-.1-13.1-10.9-23.8-24-23.8zm0 43.5c-10.7-.2-19.5-8.9-19.5-19.6s8.8-19.4 19.5-19.4 19.5 8.8 19.5 19.5-8.8 19.5-19.5 19.5z">
-                                    </path>
-                                  </svg>
-                                </span>
-                              </button>
-                              <div class="numero_adultos">2</div>
-                              <button id="num_adultos_d" type="button" class="b_contador"
-                                onclick="actualizarNumAdultos(1);">
-                                <span>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                    viewBox="-367 269 64 64">
-                                    <path
-                                      d="M-324.6 298.9h-8.3v-8.3c0-1.2-1-2.2-2.2-2.2-1.2 0-2.2 1-2.2 2.2v8.3h-8.3c-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2h8.3v8.3c0 1.2 1 2.2 2.2 2.2.6 0 1.1-.3 1.5-.7.4-.4.7-.9.7-1.5v-8.3h8.3c.6 0 1.1-.3 1.5-.7.4-.4.7-.9.7-1.5 0-1.2-1-2.2-2.2-2.2z">
-                                    </path>
-                                    <path
-                                      d="M-335 277.1c-13.3 0-24 10.7-24 23.8 0 13.1 10.7 24 24 24 13.1 0 24-10.7 24-24-.1-13.1-10.9-23.8-24-23.8zm0 43.5c-10.7-.2-19.5-8.9-19.5-19.6s8.8-19.4 19.5-19.4 19.5 8.8 19.5 19.5-8.8 19.5-19.5 19.5z">
-                                    </path>
-                                  </svg>
-                                </span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                   
-
-
-
-                  </div>
-                </div>
-                 <label for="start">Fecha:
-                <input type="date" id="start" name="date"
-       value="2022-01-22"
-       min="2022-01-01" max="2023-12-31">
-       </label>
               </div>
+              </div>
+              
+              <div class="cada-paso">
+              <label for="start">Fecha:
+                <input type="date" id="start" name="date" value="2022-01-22" min="2022-01-01" max="2023-12-31">
+              </label>
+              </div>
+             
+              <a href="/travels-finder">
+                <input type="button" value="RESERVA YA" name="submit" class="boton reserva" < />
+              </a>
+           </form>   
           </div>
-          <a href="/travels/discart">
-            <input type="submit" value="RESERVA YA" name="submit" class="boton reserva" < />
-
-          </a>
-           
-          </div>
-          </form>
         </div>
       </div>
     </div>
-  </main>
+
+</main>
+</div>
 
 
-  <!--QUÉ INCLUYE-->
-  <article class="que-incluye">
-    <div class="caja-gris">
-      <h2>¿QUÉ INCLUYE?</h2>
-      <p>Viaja cómodamente</p>
-    </div>
-    <div class="caja">
-      <ul>
-        <li>
-          <img src="https://drumwit.com/web/images/iconos/qi-billetes.png" alt="">
-          <span>Los billetes de avión, ida y vuelta</span>
-        </li>
-        <li>
-          <img src="https://drumwit.com/web/images/iconos/qi-hotel.png" alt="">
-          <span>Las noches de hotel</span>
-        </li>
-        <li>
-          <img src="https://drumwit.com/web/images/iconos/qi-emocion.png" alt="">
-          <span>¡Y toda la emoción de un viaje sorpresa!</span>
-        </li>
-      </ul>
-    </div>
-  </article>
 
-  <!--REGALA DRUMWIT-->
-  <div class="regala">
-
+<!--QUÉ INCLUYE-->
+<article class="que-incluye">
+  <div class="caja-gris">
+    <h2>¿QUÉ INCLUYE?</h2>
+    <p>Viaja cómodamente</p>
   </div>
-
-  <article class="contenido-regalo">
-    <div class="conFondo">
-      <p class="small">Regala un viaje sorpresa</p>
-      <h2>REGALA MR WEEKEND</h2>
-      <p class="intro mb-uno">Tenemos claro que viajar es vivir y por eso sabemos que, regalando esta experiencia,
-        ¡vas
-        a acertar seguro! Con la opción Regalo, las fechas son abiertas y la persona destinataria podrá decidirlas
-        cuando quiera.</p>
-      <ul>
-        <li>
-          <img src="https://drumwit.com/web/images/regala/como-regalar-un-drumwit.png"
-            alt="Imagen de un regalo del que sale un avión y estrellas">
-          <p>Cómo regalar un Mr Weekend</p>
-          <a class="boton mt-uno" href="https://drumwit.com/como-regalar-un-drumwit"
-            title="Te contamos cómo puedes regalar un viaje Drumwit">
-            DESCÚBRELO
-          </a>
-        </li>
-        <li>
-          <img src="https://drumwit.com/web/images/regala/regala-un-drumwit.png"
-            alt="Ya hemos hecho la compra ahora qué">
-          <p>Regala un Mr Weekend</p>
-          <a class="boton mt-uno" href="https://drumwit.com/regala-un-drumwit" title="Regala un viaje MRWEEKEND">
-            REGALA
-          </a>
-        </li>
-        <li>
-          <img src="https://drumwit.com/web/images/regala/canjea-tu-regalo.png"
-            alt="Ya hemos hecho la compra ahora qué">
-          <p>Canjea tu regalo Mr Weekend</p>
-          <a class="boton mt-uno" href="https://MRWEEKEND.com/canjea-tu-regalo" title="Canjea tu regalo MRWEEKEND">
-            CANJEA
-          </a>
-        </li>
-      </ul>
-    </div>
-  </article>
-
-
-  <!--OPINIONES-->
-
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item p-5 active">
-        <div class="carousel-item-container">
-
-          <img src="https://i.pinimg.com/originals/7b/b4/3e/7bb43e0911db522bdc6af21ff4ee7798.png" class="d-block w-5"
-            alt="...">
-
-          <h5>Bilbao</h5>
-          <p>Maria, inolvidable. Repetiremos!</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+  <div class="caja">
+    <ul>
+      <li>
+        <img src="https://drumwit.com/web/images/iconos/qi-billetes.png" alt="">
+        <span>Los billetes de avión, ida y vuelta</span>
+      </li>
+      <li>
+        <img src="https://drumwit.com/web/images/iconos/qi-hotel.png" alt="">
+        <span>Las noches de hotel</span>
+      </li>
+      <li>
+        <img src="https://drumwit.com/web/images/iconos/qi-emocion.png" alt="">
+        <span>¡Y toda la emoción de un viaje sorpresa!</span>
+      </li>
+    </ul>
   </div>
+</article>
+
+<!--REGALA DRUMWIT-->
+<div class="regala">
+
+</div>
+
+<article class="contenido-regalo">
+  <div class="conFondo">
+    <p class="small">Regala un viaje sorpresa</p>
+    <h2>REGALA MR WEEKEND</h2>
+    <p class="intro mb-uno">Tenemos claro que viajar es vivir y por eso sabemos que, regalando esta experiencia,
+      ¡vas
+      a acertar seguro! Con la opción Regalo, las fechas son abiertas y la persona destinataria podrá decidirlas
+      cuando quiera.</p>
+    <ul>
+      <li>
+        <img src="https://drumwit.com/web/images/regala/como-regalar-un-drumwit.png"
+          alt="Imagen de un regalo del que sale un avión y estrellas">
+        <p>Cómo regalar un Mr Weekend</p>
+        <a class="boton mt-uno" href="https://drumwit.com/como-regalar-un-drumwit"
+          title="Te contamos cómo puedes regalar un viaje Drumwit">
+          DESCÚBRELO
+        </a>
+      </li>
+      <li>
+        <img src="https://drumwit.com/web/images/regala/regala-un-drumwit.png" alt="Ya hemos hecho la compra ahora qué">
+        <p>Regala un Mr Weekend</p>
+        <a class="boton mt-uno" href="https://drumwit.com/regala-un-drumwit" title="Regala un viaje MRWEEKEND">
+          REGALA
+        </a>
+      </li>
+      <li>
+        <img src="https://drumwit.com/web/images/regala/canjea-tu-regalo.png" alt="Ya hemos hecho la compra ahora qué">
+        <p>Canjea tu regalo Mr Weekend</p>
+        <a class="boton mt-uno" href="https://MRWEEKEND.com/canjea-tu-regalo" title="Canjea tu regalo MRWEEKEND">
+          CANJEA
+        </a>
+      </li>
+    </ul>
+  </div>
+</article>
+
+
+<!--OPINIONES-->
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+      aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+      aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item p-5 active">
+      <div class="carousel-item-container">
+
+        <img src="https://i.pinimg.com/originals/7b/b4/3e/7bb43e0911db522bdc6af21ff4ee7798.png" class="d-block w-5"
+          alt="...">
+
+        <h5>Bilbao</h5>
+        <p>Maria, inolvidable. Repetiremos!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 </div>
 </div>
 </div>
