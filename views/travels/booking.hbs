@@ -1,6 +1,6 @@
 <div class="container">
 	<section>
-		<div>
+		<div class="breadcrumb-container">
 
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
@@ -12,9 +12,9 @@
 		</div>
 		<div>
 
-			<h1>DATOS DE LA RESERVA</h1>
+			<h3>DATOS DE LA RESERVA</h3>
 			<div>
-				<div class="col-md-4">
+				<div class="col-md-4 mb-4">
 					<label for="validationServer01" class="form-label">Viajeros</label>
 					<select class="form-select" id="validationServer04" aria-describedby="validationServer04Feedback" required>
 						<option selected value="0">Seleccionar numero de huespedes</option>
@@ -31,28 +31,28 @@
 				</div>
 				<form class="row g m">
 					{{!-- Here is missing the loop to render the traveller form for each --}}
-					<div>
+					{{!-- <div> --}}
 
-						<div class="col-md-4">
+						<div class="col-md-4 mb-4">
 							<label for="validationServer02" class="form-label">Nombre</label>
 							<input type="text" class="form-control {{#if errors.name}}is-invalid{{/if}}" id="validationServer02" value="" required>
 							<div class="valid-feedback">
 								Looks good!
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 mb-4">
 							<label for="validationServer02" class="form-label">Primer Apellido</label>
 							<input type="text" class="form-control {{#if errors.surname}}is-invalid{{/if}}" id="validationServer02" value="" required>
 							<div class="valid-feedback">
 								Looks good!
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 mb-4">
 							<label for="validationServer02" class="form-label">Segundo Apellido</label>
 							<input type="text" class="form-control {{#if errors.secondSurname}}is-invalid{{/if}}" id="validationServer02" value="">
 						</div>
 						
-						<div class="col-md-3">
+						<div class="col-md-3 mb-4">
 							<label for="validationServer04" class="form-label">Fecha de nacimiento</label>
 							<input type="date" class="form-control {{#if errors.birthday}}is-invalid{{/if}}" id="start" name="trip-start"
 							value=""
@@ -88,7 +88,7 @@
 								Please select a valid state.
 							</div>
 						</div>
-						<div class="col-12">
+						<div class="col-12 mb-4">
 							<div class="form-check">
 								<input class="form-check-input {{#if errors.termsAndConditionsCheck}}is-invalid{{/if}}" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
 								<label class="form-check-label" for="invalidCheck3">
@@ -102,7 +102,7 @@
 						<div class="col-12">
 							<button class="btn btn-primary" type="submit">Submit form</button>
 						</div>
-					</div>
+					{{!-- </div> --}}
 				</form>
 			</div>
 		</div>

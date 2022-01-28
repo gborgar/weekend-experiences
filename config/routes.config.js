@@ -14,7 +14,7 @@ router.post("/travels", secure.isAuthenticated, secure.isAdmin, multer.single("i
 router.get("/travels/create", secure.isAuthenticated, secure.isAdmin, travels.create);
 router.get("/travels/list", travels.list);
 router.get("/travels/:id/detail", travels.detail);
-router.get("/travels/booking", travels.booking;
+router.get("/travels/booking", travels.booking);
 router.get("/travels/discart", travels.discart);
 
 router.get("/travels-finder", reservations.doTravelFind);
