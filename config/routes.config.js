@@ -14,11 +14,13 @@ router.post("/travels", secure.isAuthenticated, secure.isAdmin, multer.single("i
 router.get("/travels/create", secure.isAuthenticated, secure.isAdmin, travels.create);
 router.get("/travels/list", travels.list);
 router.get("/travels/:id/detail", travels.detail);
-router.get("/travels/reserva", travels.reserva);
+router.get("/travels/booking", travels.booking);
 router.get("/travels/discart", travels.discart);
 
 router.get("/travels-finder", reservations.doTravelFind);
+router.post("/travels-finder", reservations.doTravelBook);
 
+router.get("/bookings/:id", secure.isAuthenticated, reservations.detail)
 
 router.get("/register", auth.register);
 router.post("/register", auth.doRegister);
