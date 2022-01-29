@@ -1,5 +1,8 @@
 body {
-  /*background-image: url("/img/bgimage.jpg");*/
+  background-image: url("/img/bgimage.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .travel-card-image {
@@ -13,7 +16,6 @@ body {
   max-height: 278px;
   font-size: 10px;
 }
-
 
 .carousel-item img {
   width: 150px;
@@ -51,86 +53,21 @@ article.contenido-regalo {
   height: 100%;
   max-height: 250px;
   padding: 20px;
-  background-image: url(https://cdn.pixabay.com/photo/2016/11/16/05/11/man-1828202_1280.jpg);
-  background-position: center;
-}
-
-
-.form_reservas {
-  background: rgba(255,255,255,.85);
-  border-radius: 0.2em;
-  display: flex;
-  max-height: 165px;
-  padding: 30px 30px 10px;
+  background-image: url("/img/2.webp");
+  background-position:center;
   width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  align-content: center;
-}
-
-.cada-linea {
-  border: 1px solid #ddd;
-}
-
-.conImgFomdo {
-  border: 1px solid #ddd; 
-
 }
 
 .seleccionar-viajeros {
-  display: none;
   background: #fff;
   border-top: 3px solid #efefef;
   height: auto;
-  margin: 0;
-  position: relative;
   box-shadow: 0 8px 5px -6px rgb(0 0 0 / 28%);
   -moz-box-shadow: 0 8px 5px -6px rgba(0,0,0,.28);
-  -webkit-box-shadow: 0 8px 5px -6px rgb(0 0 0 / 28%);
-  float: left;
-  right: 0;
-  top: 0;
-  width: 325px;
-  z-index: 11;
-}
- .con-regalo, .form_reservas label span{
-  display: inline-block;
-  color: #279fb0;
-  font-size: 1em;
-  font-weight: 500;
-  padding-bottom: 0.5em;
-  text-align: left;
-  width: 100%;
+  -webkit-box-shadow: 0 8px 5px -6px rgb(0 0 0 / 28%); 
 }
 
-.reservas .cada-paso {
-    padding-right: 1%;
-}
-
-.cada-paso {
-    float: left;
-    min-height: 116px;
-    padding: 10px 20px 20px 20px;
-    text-align: left;
-    position: relative;
-    vertical-align: middle;
-    z-index: 1;
-}
-
-.continente.index, .continente.index-log {
-    perspective: 1px;
-    transform-style: preserve-3d;
-    height: 100vh;
-    position: relative;
-    text-align: center;
-    padding: 0;
-    margin-top: 62px;
-}
 body, html {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     color: #111;
     font-family: Montserrat,sans-serif;
     font-size: 1em;
@@ -142,17 +79,7 @@ body, html {
     height: 100%;
     width: 100%;
 }
-*, ::after, ::before {
-    box-sizing: inherit;
-}
-*, ::after, ::before {
-    box-sizing: inherit;
-}
-::selection {
-    background: #279fb0;
-    text-shadow: none;
-    color: #fff;
-}
+
 .form_reservas {
   background: rgb(243 236 236 / 44%)  no-repeat scroll 98% center;
   color: #000;
@@ -170,91 +97,18 @@ body, html {
   overflow: hidden;
   width: 100%;
 }
-.viajeros {
-  background: #fff url(../images/iconos/flecha.png) no-repeat 98% center;
-  margin: 0;
-  overflow: hidden;
-  width: 100%;
-}
 
-.form_reservas input.boton {
+.boton {
   background-color: #f3ac2b;
   border: 3px solid #fff;
-  z-index: 100;
   width:auto;
 }
-#canjear_cupon input#boton_canjear_cupon, #canjear_puntos input#boton_canjear_puntos, .contenido-regalo .boton, .datosReserva input.boton, .datosReserva input.boton-descarga, .experiencias .boton,  .suscribete button.boton, a.boton, input#buscarReserva[type=submit], input.boton, input.seleccion-viajeros {
-  cursor: pointer;
-  background-image: url(../images/avion-25.svg);
-  background-size: 60px;
-  background-repeat: no-repeat;
-  background-color: #279fb0;
-  background-position: right;
-  border: 3px solid #279fb0;
-  border-radius: 5px;
+
+.btn-secondary {
   color: #fff;
-  display: inline-block;
-  line-height: 38px;
-  font-size: 1.1em;
-  min-height: 38px;
-  padding: 0;
-  text-transform: uppercase;
-  transition: all .3s ease 0s;
-  width: 100%;
-  z-index: 0;
+  background-color: #63aae9;
+  border-color: #63aae9;
 }
-button, html input[type=button], input[type=reset], input[type=submit] {
-  border: 0;
-  cursor: pointer;
-  -webkit-border-radius: 0px;
-  -webkit-appearance: textarea;
-}
-input[type="submit" i] {
-  appearance: auto;
-  user-select: none;
-  white-space: pre;
-  align-items: flex-start;
-  text-align: center;
-  cursor: default;
-  box-sizing: border-box;
-  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
-  color: -internal-light-dark(black, white);
-  padding: 1px 6px;
-  border-width: 2px;
-  border-style: outset;
-  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-  border-image: initial;
-}
-
-/* input {
-  -webkit-writing-mode: horizontal-tb !important;
-  text-rendering: auto;
-  color: -internal-light-dark(black, white);
-  letter-spacing: normal;
-  word-spacing: normal;
-  line-height: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: start;
-  appearance: auto;
-  -webkit-rtl-ordering: logical;
-  cursor: text;
-  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
-  margin: 0em;
-  padding: 1px 2px;
-  border-width: 2px;
-  border-style: inset;
-  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-  border-image: initial;
-} */
-select#tipo_destino {
-
-  outline:none;
-}
-
-
 
 <!--DESCARTAR DESTINOS-->
 
@@ -264,7 +118,6 @@ select#tipo_destino {
   justify-content: space-around;
   flex-wrap: nowrap;
   height:250px;
-  
 }
 
 <!--RESERVA-->
@@ -279,18 +132,6 @@ select#tipo_destino {
   text-align: left;
 }
 
-.datosReserva .untercio, .form_contacto label.untercio {
-  float: left;
-  margin: 0 2% 15px 0;
-  width: 32%;
-}
-
-#datos-pago, #datosComentarios, #datosEnvio, #datosViajes, .datosCupon, .datosPuntos, .datosReserva, .tuReserva {
-  display: inline-block;
-  font-size: 1em;
-  margin-bottom: 25px;
-  width: 100%;
-}
 .interiores {
   display: inline-block;
   position: relative;
@@ -298,91 +139,12 @@ select#tipo_destino {
   width: 100%;
 }
 
-::selection {
-  background: #279fb0;
-  text-shadow: none;
-  color: #fff;
-}
-
-.datosReserva label {
-  float: left;
-  margin: 0 2% 0 0;
-  width: 100%;
-}
-
-#datosComentarios textarea, #datosEnvio input, #datosFactura input, #datosViajes textarea, .datosCupon input, .datosPuntos input, .datosReserva input, .form_comprar input, .form_contacto input, .form_contacto textarea, .form_tureserva input {
-  background-color: #fff;
-  background-image: none;
-  border: solid 2px #279fb0;
-  display: inline-block;
-  font-family: Montserrat,sans-serif;
-  font-size: .95em;
-  font-weight: 500;
-  margin-bottom: 0.5em;
-  max-width: 100%;
-  padding: 10px;
-  text-rendering: optimizelegibility;
-  width: 100%;
-}
-
-#datosViajes .radio {
-  background: #fff;
-  float: left;
-  padding: 0;
-  margin: 0 0 1em 1em;
-  width: auto;
-}
-
-#confirmar_compra .radio input[type=radio]:checked+label, .form_registro .radio input[type=radio]:checked+label {
-  border: 2px solid #f3ac2c;
-  padding: 5px 15px;
-  background: #f3ac2c;
-  color: #fff;
-}
-#confirmar_compra .radio label {
-  background: #279fb0;
-  border: 2px solid #279fb0;
-  color: #fff;
-  font-size: 1em;
-  float: left;
-  margin-right: 1em;
-  width: auto;
-}
-#confirmar_compra .radio label, .form_registro .radio label {
-  background: #279fb0;
-  border-radius: 4px;
-  border: 2px solid #279fb0;
-  cursor: pointer;
-  color: #fff;
-  display: inline-block;
-  font-size: .9em;
-  font-weight: 600;
-  margin-bottom: 0.5em;
-  position: relative;
-  padding: 5px 15px;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
-  text-align: left;
-  width: 33.1%;
-}
-
-p {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-}
-
-
 .panel {
-  background-color: #F1f1f1;
+  background-color: #f1f1f1b3;
   padding: 20px 40px;
   border-radius: 3px;
-  box-shadow: 1px 2px 0px rgba(255,255,255,.1);
+  box-shadow: 1px 2px 0px rgb(255 255 255 / 13%);
 }
-
 .card-services {
   text-align: center;
   background-color: #F1F1F1;
