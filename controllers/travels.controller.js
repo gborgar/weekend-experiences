@@ -2,6 +2,8 @@ const createError = require("http-errors");
 const mongoose = require("mongoose");
 const User = require("../models/user.model");
 const Travel = require("../models/travel.model");
+const countries = require('../data/countries');
+const documentTypes = require('../data/documentTypes');
 
 module.exports.doCreate = (req, res, next) => {
   const travel = req.body;
@@ -56,8 +58,8 @@ module.exports.detail = (req, res, next) => {
     .catch((error) => next(error));
 };
 
-module.exports.reserva = (req, res, next) => {
-  res.render("travels/reserva")
+module.exports.booking = (req, res, next) => {
+  res.render("travels/booking", { countries, documentTypes })
 };
 
 module.exports.discart = (req, res, next) => {
