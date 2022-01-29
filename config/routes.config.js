@@ -18,7 +18,9 @@ router.get("/travels/booking", travels.booking);
 router.get("/travels/discart", travels.discart);
 
 router.get("/travels-finder", reservations.doTravelFind);
+router.post("/travels-finder", reservations.doTravelBook);
 
+router.get("/bookings/:id", secure.isAuthenticated, reservations.detail)
 
 router.get("/register", auth.register);
 router.post("/register", auth.doRegister);
