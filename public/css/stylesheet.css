@@ -18,14 +18,10 @@ ul {
 
 }
 
-article.contenido-regalo {
-  background-image: url(https://cdn.pixabay.com/photo/2016/11/16/05/11/man-1828202_1280.jpg);
-}
-
 .home {
   padding: 50px 20px;
   /* padding: 190px; */
-  background-image: url("/img/nada.jpg");
+  background-image: url("/img/headers/nada.jpg");
   background-position:center;
   background-size: cover;
   width: 100%;
@@ -86,7 +82,7 @@ body, html {
 }
 
 .btn-primary {
-  color: #000;
+  color: rgb(0 112 212);
   background-color: rgb(245, 229, 8);
   border-color: rgb(225, 211, 9);
 }
@@ -112,7 +108,7 @@ body, html {
 
 .section-header {
   text-align: center;
-  padding: 60px 15px;
+  padding: 70px 2px 0;
   width: 100%;
   /* text-shadow: 1px 1px 1px rgb(0 0 0 / 20%); */
 }
@@ -125,13 +121,14 @@ body, html {
 }
 
 .image-box img {
-  max-width: 150px;
+  max-width: 140px;
 }
 
 .section-opinions {
   text-align: center;
-  padding: 80px 0px;
+  padding: 30px 0px;
   width: 100%;
+
 }
 
 .section-opinions .separator {
@@ -180,18 +177,27 @@ body, html {
 
 h5 {
   color:rgb(0 112 212);
-  margin-top: 40px;
-
+  margin-top: 10px;
+  text-align: center;
 }
 
 p {
-  color:floralwhite;
-  text-shadow: 3px 3px 5px rgb(52, 54, 52);
-}
+  color:rgb(41, 43, 41);
+  text-shadow: 0px 6px 6px rgb(249, 252, 249);
+  text-align: center;
+  font-size: 1em;
+} 
 
 .breadcrumb a {
   padding-top: 2rem;
   color: #279fb0;
+}
+
+.carousel-caption img {
+  width: 140px;
+  height: 140px;
+  border-radius:100%;
+  box-shadow: 0 8px 5px -6px rgb(0 0 0 / 28%);
 }
 
 h3 {
@@ -223,9 +229,133 @@ h4 {
   border: 1px solid #279fb0;
 }
 
+
 .carousel-caption img {
   width: 200px;
   height: 200px;
   border-radius:100%;
   box-shadow: 0 8px 5px -6px rgb(0 0 0 / 28%);
+}
+
+.d-flex {
+  align-items: center;
+}
+
+.carousel-indicators [data-bs-target] {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 4px;
+  padding: 0;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #f5e508;
+  background-clip: padding-box;
+  border: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: .5;
+  transition: opacity .6s ease;
+}
+
+.container-footer {
+  width: 100%;
+}
+
+/*europeHome*/
+
+.europeHome {
+  padding: 80px 20px;
+  /* padding: 190px; */
+  background-image: url("/img/headers/8.jpg");
+  background-position:center;
+  background-size: cover;
+  width: 100%;
+  box-shadow: 0px 2px 2px rgb(0 0 0 / 30%);
+  height: 392px;
+}
+
+.europeHome h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 3px 3px 5px rgb(52, 54, 52);
+}
+
+.europeHome h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 3px 3px 5px rgb(52, 54, 52);
+}
+
+.col-3 {
+  flex:0 0 auto;
+  width: 33%;
+}
+
+
+/*spainHome*/
+
+.spainHome {
+  padding: 80px 20px;
+  /* padding: 190px; */
+  background-image: url("/img/headers/m.jpg");
+  background-position:center;
+  background-size: cover;
+  width: 100%;
+  box-shadow: 0px 2px 2px rgb(0 0 0 / 30%);
+  height: 392px;
+}
+
+.spainHome h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 3px 3px 5px rgb(52, 54, 52);
+}
+
+.spainHome h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 3px 3px 5px rgb(52, 54, 52);
+}
+
+.row-spain{
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+  background-color:#333333;;
+  height: 80px;;
+}
+
+h6 {
+  font-size: 1.1em;
+}
+
+.col-2 {
+  flex:0 0 auto;
+  width: 25%;
+}
+
+.col-2 img{
+  flex:0 0 auto;
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.separator-simple {
+  border-bottom: 2px solid rgb(237 228 102);
+  width: 100%;
+  max-width: 15em;
+  margin-bottom: 0.80rem;
+}
+
+.text-primary-price {
+  color: rgb(0 112 212) !important;
+  font-size: 35px;
 }
