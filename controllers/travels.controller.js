@@ -63,3 +63,11 @@ module.exports.reserva = (req, res, next) => {
 module.exports.discart = (req, res, next) => {
   res.render("travels/discart")
 };
+
+module.exports.europe = (req, res, next) => {
+  res.render("travels/europe")
+};
+
+module.exports.spain = (req, res, next) => {
+  res.render("travels/spain")
+};

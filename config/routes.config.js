@@ -16,6 +16,8 @@ router.get("/travels/list", travels.list);
 router.get("/travels/:id/detail", travels.detail);
 router.get("/travels/reserva", travels.reserva);
 router.get("/travels/discart", travels.discart);
+router.get("/travels/europe", travels.europe);
+router.get("/travels/spain", travels.spain);
 
 router.get("/travels-finder", reservations.doTravelFind);
 
