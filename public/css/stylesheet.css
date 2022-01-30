@@ -188,12 +188,45 @@ p {
   font-size: 1em;
 } 
 
+.breadcrumb a {
+  padding-top: 2rem;
+  color: #279fb0;
+}
 
 .carousel-caption img {
   width: 140px;
   height: 140px;
   border-radius:100%;
   box-shadow: 0 8px 5px -6px rgb(0 0 0 / 28%);
+}
+
+h3 {
+  color: #279fb0;
+  font-size: 2em;
+  font-weight: 400;
+  padding: 0.6em 0 0;
+  position: relative;
+  text-align: center;
+}
+
+h4 {
+  color: #279fb0;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 0.6em 0 0;
+  position: relative;
+}
+
+.form-control {
+  border: 1px solid #279fb0;
+}
+
+.form-select {
+  border: 1px solid #279fb0;
+}
+
+.form-check-input[type=checkbox] {
+  border: 1px solid #279fb0;
 }
 
 .d-flex {
