@@ -16,13 +16,19 @@ module.exports.doTravelFind = (req, res, next) => {
 
 module.exports.doTravelBook = (req, res, next) => {
     const booking = req.body;
-    booking.owner = req.user.id;
-    //const randomChoice = ''; // random element from booking.travelChoices
-    //booking.travel = randomChoice;
     console.log(booking);
-    Booking.create(booking)
-        .then(booking => res.redirect(`/bookings/${booking.id}`))
-        .catch(error => next(error))
+    booking.owner = req.user.id;
+    Travel.find({destination:booking.destination})
+        .then(travels => {
+            const validTravels = travels.filter(travel => !booking.travelChoices.includes(travel.id));
+            booking.travel = validTravels[Math.floor(Math.random() * validTravels.length)];
+            console.log("booking");
+           console.log(booking);  
+           Booking.create(booking)
+            .then(booking => res.redirect(`/bookings/${booking.id}`))
+            .catch(error => next(error))
+        })
+        .catch(error => next(error));
 }
 
 
