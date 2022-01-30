@@ -19,6 +19,7 @@ router.get("/travels/discart", travels.discart);
 router.get("/travels/europe", travels.europe);
 router.get("/travels/spain", travels.spain);
 
+
 router.get("/travels-finder", reservations.doTravelFind);
 router.post("/travels-finder", reservations.doTravelBook);
 

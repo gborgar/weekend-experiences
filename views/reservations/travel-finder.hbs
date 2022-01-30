@@ -6,11 +6,10 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="../reservations/travel-finder.hbs">Descartar</a></li>
+            <li class="breadcrumb-item"><a href="../reservations/travel-finder.hbs">Descartar y reserva</a></li>
           </ol>
         </nav>
       </div>
-      <div>
         
         <h3>DATOS DE LA RESERVA</h3>
         <form class="row g m" action="/travels-finder" method="POST">
@@ -29,6 +28,10 @@
             <div class="col-md-2 mb-4">
               <label class="form-label">Date</label>
               <input type="text" name="date" class="form-control" value="{{ finder.date }}" readonly>
+            </div>
+             <div class="col-md-2 mb-4">
+              <label class="form-label">Aeropuerto</label>
+              <input type="text" name="airport" class="form-control" value="{{ finder.airport }}" readonly>
             </div>
           </div>
 
@@ -185,7 +188,7 @@
                 <input class="form-check-input {{#if errors.termsAndConditionsCheck}}is-invalid{{/if}}"
                   type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
                 <label class="form-check-label" for="invalidCheck3">
-                  Estoy de acuerdo con los términos y condicones
+                  Estoy de acuerdo con los términos y condiciones
                 </label>
                 <div id="invalidCheck3Feedback" class="invalid-feedback">
                   You must agree before submitting.
@@ -197,6 +200,5 @@
               <button class="btn btn-primary" type="submit">Confirmar Reserva</button>
             </div>
         </form>
-      </div>
     </section>
   </div>

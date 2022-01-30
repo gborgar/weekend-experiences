@@ -21,7 +21,7 @@ module.exports.doTravelBook = (req, res, next) => {
     booking.travel = booking.travelChoices[Math.floor(Math.random() * booking.travelChoices.length)];
     console.log(booking);
         Booking.create(booking)
-        .then(booking => res.redirect(`/bookings/${booking.id}`))
+        .then(booking => res.redirect(`../bookings/${booking.id}`))
         .catch(error => next(error));
 }
 
