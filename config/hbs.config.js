@@ -19,7 +19,7 @@ hbs.registerHelper("setKeyWords", (keyWords) => {
 })
 
 hbs.registerHelper('for', function(from, to, incr, block) {
-    let accum = 0;
+    let accum = '';
     for(let i = from; i < to; i += incr)
         accum += block.fn({ index: i, pretty: i + 1});
     return accum;
