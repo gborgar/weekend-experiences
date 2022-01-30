@@ -24,6 +24,9 @@ const bookingSchema = new Schema(
       ref: 'Travel',
       type: mongoose.Types.ObjectId
     },
+    airport: {
+      type: String
+    },
     travellers: {
       type: [
         {
@@ -79,7 +82,7 @@ const bookingSchema = new Schema(
           phone: {
             type: Number,
             required: 'Traveller phone is required'
-          },
+          } 
         }
       ]
     }
