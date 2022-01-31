@@ -10,7 +10,7 @@ const reservations = require("../controllers/reservations.controller");
 
 router.get("/", misc.home);
 
-router.post("/travels", secure.isAuthenticated, secure.isAdmin, multer.single("image"), travels.doCreate);
+router.post("/travels", secure.isAuthenticated, secure.isAdmin, multer.fields([{ name: 'image', maxCount: 1}, { name: 'hotelImage', maxCount: 1}]), travels.doCreate);
 router.get("/travels/create", secure.isAuthenticated, secure.isAdmin, travels.create);
 router.get("/travels/list", travels.list);
 router.get("/travels/:id/detail", travels.detail);

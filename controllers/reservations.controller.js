@@ -1,17 +1,29 @@
 const Travel = require("../models/travel.model");
 const Booking = require("../models/booking.model");
+const mongoose = require("mongoose");
 const countries = require('../data/countries');
 const documentTypes = require('../data/documentTypes');
+const createError = require("http-errors");
+
 
 module.exports.doTravelFind = (req, res, next) => {
     
     const finder = req.query;
-    console.log('req.query',finder)
+    function renderWithErrors(errors) {
+        res.render("reservations/travel-finder", {finder, countries, documentTypes, errors});
+    };
+
     Travel.find({destination:finder.destination})
         .then(travels => {
             res.render("reservations/travel-finder", {travels, finder, countries, documentTypes})
         })
-        .catch(error => next(error));
+        .catch(error => {
+            if (error instanceof mongoose.Error.ValidationError) {
+                renderWithErrors(error.errors);
+              } else {
+                next(error);
+              }
+        });
 };
 
 module.exports.doTravelBook = (req, res, next) => {

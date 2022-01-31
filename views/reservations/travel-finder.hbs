@@ -17,12 +17,6 @@
             <div class="col-md-2 mb-4">
               <label class="form-label">Viajeros</label>
               <input type="number" class="form-control" value="{{finder.travellers}}" readonly>
-              <div id="validationServer04Feedback" class="invalid-feedback">
-                Please select a valid state.
-              </div>
-              <div class="valid-feedback">
-                Looks good!
-              </div>
             </div>
 
             <div class="col-md-2 mb-4">
@@ -63,31 +57,22 @@
               <div class="col-md-6 mb-4">
                 <label class="form-label">Nombre</label>
                 <input type="text" name="travellers[{{ this.index }}][name]" class="form-control {{#if errors.name}}is-invalid{{/if}}" value="" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
               </div>
 
               <div class="col-md-6 mb-4">
                 <label class="form-label">Apellidos</label>
                 <input type="text" name="travellers[{{ this.index }}][lastname]" class="form-control {{#if errors.lastname}}is-invalid{{/if}}" value="" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
               </div>
 
               <div class="col-md-3 mb-4">
                 <label class="form-label">Fecha de nacimiento</label>
                 <input type="date" name="travellers[{{ this.index }}][birthday]" class="form-control {{#if errors.birthday}}is-invalid{{/if}}"
-                  name="trip-start" value="" min="1900-01-01" max="2080-12-31">
-                <div id="validationServer04Feedback" class="invalid-feedback">
-                  Please select a valid state.
-                </div>
+                  name="trip-start" value="" min="1900-01-01" max="2080-12-31" required>
               </div>
 
               <div class="col-md-3 mb-4">
                 <label class="form-label">Nacionalidad</label>
-                <select class="form-select {{#if errors.nacionality}}is-invalid{{/if}}" name="travellers[{{ this.index }}][nationality]"
+                <select class="form-select {{#if errors.nationality}}is-invalid{{/if}}" name="travellers[{{ this.index }}][nationality]"
                   aria-describedby="validationServer04Feedback" required>
                   <option selected disabled value="">Seleccionar nacionalidad</option>
                   {{#each ../countries as |country|}}
@@ -110,46 +95,31 @@
               <div class="col-md-3 mb-4">
                 <label class="form-label">Número de documento</label>
                 <input type="text" name="travellers[{{ this.index }}][documentNumber]" class="form-control {{#if errors.documentNumber}}is-invalid{{/if}}"
-                  value="" min="1900-01-01" max="2080-12-31">
-                <div id="validationServer04Feedback" class="invalid-feedback">
-                  Please select a valid state.
-                </div>
+                  value="" min="1900-01-01" max="2080-12-31" required>
               </div>
 
               <div class="col-md-12 mb-4">
                 <label class="form-label">Dirección</label>
                 <input type="text" name="travellers[{{ this.index }}][address][street]" class="form-control {{#if errors.address}}is-invalid{{/if}}"
                   value="" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
               </div>
 
               <div class="col-md-4 mb-4">
                 <label class="form-label">Ciudad</label>
                 <input type="text" name="travellers[{{ this.index }}][address][city]" class="form-control {{#if errors.city}}is-invalid{{/if}}"
                   value="" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
               </div>
 
               <div class="col-md-4 mb-4">
                 <label class="form-label">Provincia</label>
                 <input type="text" name="travellers[{{ this.index }}][address][province]" class="form-control {{#if errors.province}}is-invalid{{/if}}"
                   value="" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
               </div>
 
               <div class="col-md-4 mb-4">
                 <label class="form-label">Código Postal</label>
                 <input type="text" name="travellers[{{ this.index }}][address][zipcode]" class="form-control {{#if errors.zipcode}}is-invalid{{/if}}"
                   value="" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
               </div>
 
               <div class="col-md-4 mb-4">
@@ -167,18 +137,12 @@
                 <label class="form-label">Email</label>
                 <input type="email" name="travellers[{{ this.index }}][email]" class="form-control {{#if errors.email}}is-invalid{{/if}}" 
                   value="" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
               </div>
 
               <div class="col-md-4 mb-4">
                 <label class="form-label">Teléfono</label>
                 <input type="number" name="travellers[{{ this.index }}][phone]"class="form-control {{#if errors.phone}}is-invalid{{/if}}"
                   value="" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
               </div>
             </div>
           {{/for}}
@@ -190,9 +154,6 @@
                 <label class="form-check-label" for="invalidCheck3">
                   Estoy de acuerdo con los términos y condiciones
                 </label>
-                <div id="invalidCheck3Feedback" class="invalid-feedback">
-                  You must agree before submitting.
-                </div>
               </div>
             </div>
 

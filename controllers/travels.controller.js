@@ -7,7 +7,8 @@ const documentTypes = require('../data/documentTypes');
 
 module.exports.doCreate = (req, res, next) => {
   const travel = req.body;
-  travel.image = req.file?.path;
+  travel.image = req.files?.image?.[0]?.path;
+  travel.hotel.image = req.files?.hotelImage?.[0]?.path;
   travel.keyWords = travel.keyWords
   console.log(req.body);
 
@@ -19,7 +20,7 @@ module.exports.doCreate = (req, res, next) => {
     .catch((error) => {
       if (error instanceof mongoose.Error.ValidationError) {
         res.render("travels/create", {
-          contact: req.body,
+          travel: req.body,
           errors: error.errors,
         });
       } else {
