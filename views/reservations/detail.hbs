@@ -10,30 +10,25 @@
       </div>
 
     <h3>DATOS DE LA RESERVA</h3>
-        <form class="row g m" action="/travels-finder" method="GET">
-          <div class="row reserva">
+        
+          <div class="row">
             
-            <div class="col-md-2 mb-4">
+            <div class="col-md-3 mb-4">
               <label class="form-label">Viajeros</label>
               <input type="number" class="form-control" value="{{booking.travellers.length}}" readonly>
-              <div id="validationServer04Feedback" class="invalid-feedback">
-                Please select a valid state.
               </div>
-            </div>
 
-            <div class="col-md-2 mb-4">
+            <div class="col-md-3 mb-4">
               <label class="form-label">Date</label>
               <input type="text" name="date" class="form-control" value="{{booking.date}}" readonly>
             </div>
-          </div>
 
-            <div class="col-md-2 mb-4">
+            <div class="col-md-3 mb-4">
               <label class="form-label">Aeropuerto</label>
               <input type="text" name="airport" class="form-control" value="{{ booking.airport }}" readonly>
             </div>
-          </div>
 
-        <div class="col-md-2 mb-4">
+        <div class="col-md-3 mb-4">
               <label class="form-label">Precio por persona</label>
               <h6 class="card-title">{{travel.price}}€</h6>
             </div>
@@ -51,7 +46,5 @@
       <li>{{travel.duration}} días</li>
       <li>{{#setKeyWords travel.keyWords}}{{/setKeyWords}}</li>
     </ul>
-    
-    <a href="/travels/list" class="btn btn-secondary btn-sm text-uppercase">Volver a la lista</a>
   </div>
 </div>

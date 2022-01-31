@@ -45,6 +45,22 @@ const travelSchema = new Schema(
       required: true,
       enum: keywords
     },
+    hotel: {
+      type: {
+        name: {
+          type: String,
+          required: 'Hotel name is required'
+        },
+        description: {
+          type: String,
+          required: 'Hotel description is required'
+        }, 
+        image: {
+          type: String,
+          required: 'Hotel image is required'
+        }
+      }
+    }
   },
   { timestamp: true }
 );

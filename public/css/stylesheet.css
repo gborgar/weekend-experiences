@@ -7,9 +7,22 @@
 
 .card {
   max-height: 278px;
-  font-size: 10px;
+  font-size: 12px;
 }
 
+.card-hotel {
+  max-height: 200px;
+  font-size: 12px;
+  overflow: auto;
+  padding-left: 13px;
+}
+
+.travel-card-hotel-image {
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
+}
 
 ul {
   display: inline-flex;
@@ -201,8 +214,8 @@ p {
 }
 
 h3 {
-  color: #279fb0;
-  font-size: 2em;
+  color: #0d0d0e;
+  font-size: 16px;
   font-weight: 400;
   padding: 0.6em 0 0;
   position: relative;
@@ -211,7 +224,7 @@ h3 {
 
 h4 {
   color: #279fb0;
-  font-size: 1em;
+  font-size: 12px;
   font-weight: 400;
   padding: 0.6em 0 0;
   position: relative;
@@ -347,7 +360,20 @@ h6 {
   margin-bottom: 0.80rem;
 }
 
+.separator-card {
+  border-bottom: 2px solid rgb(237 228 102);
+  width: 100%;
+  margin-bottom: 0.80rem;
+}
+
 .text-primary-price {
   color: rgb(0 112 212) !important;
   font-size: 35px;
+}
+
+.travel-price {
+  font-size: 20px;
+  color:rgb(52, 54, 52);
+  text-align: end;
+
 }

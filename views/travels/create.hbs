@@ -1,10 +1,10 @@
 <div class="row justify-content-center">
   <div class="col-12 col-sm-8">
-    <h4>Crear Viaje</h4>
+    <h3 class="mb-6 uppercase">CREAR VIAJE</h3>
     <form action="/travels" method="post" enctype="multipart/form-data">
 
       <div class="form-check mb-3">
-        <label for="exampleInputEmail1" class="form-check-label">Destino</label><br>
+        <label for="exampleInputEmail1" class="form-check-label">Destinos</label><br>
         <input type="radio" class="form-check-input {{#if errors.destination}}is-invalid{{/if}}" name="destination" value="national">
         <label for="html">Nacionales</label><br>
         <input type="radio" class="form-check-input {{#if errors.destination}}is-invalid{{/if}}" name="destination" value="europe">
@@ -78,13 +78,28 @@
 
           <input type="checkbox" class="form-check-input {{#if errors.keyWords}}is-invalid{{/if}}" name="keyWords" value="romantic">
           <label for="romantic">Romántico</label><br>
-        
+          
         <div class="invalid-feedback">{{ errors.keyWords }}</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail2" class="form-label">Hotel</label>
+        <input type="text" class="form-control {{#if errors.hotel.name}}is-invalid{{/if}}" name="hotel[name]" value="{{ travel.hotel.name }}" placeholder="..." />
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail2" class="form-label">Descripción</label>
+        <input type="textarea" class="form-control {{#if errors.hotel.description}}is-invalid{{/if}}" name="hotel[description]" value="{{ travel.hotel.description }}" placeholder="..." />
+      </div>
+
+       <div class="mb-4">
+        <label for="exampleInputEmail2" class="form-label">Imagen del hotel</label>
+        <input type="file" class="form-control {{#if errors.hotel.image}}is-invalid{{/if}}" name="hotelImage" value="{{ travel.hotel.image }}" placeholder="..." />
       </div>
 
       <div class="form-check mb-3">
         <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
-        <label class="form-check-label" for="validationFormCheck1">Clícame</label>
+        <label class="form-check-label" for="validationFormCheck1">Estoy de acuerdo</label>
         <div class="invalid-feedback">Debes hacer click</div>
       </div>
 

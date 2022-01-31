@@ -1,15 +1,50 @@
-<div class="card mb-3">  
-  <img src="{{travel.image}}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{travel.title}}</h5>
-    <p class="card-text">{{travel.description}}</p>
-    <ul>
-      <li>Viaje en: {{travel.tripMode}}</li>
-      <li>{{travel.duration}} días</li>
-      <li>{{#setKeyWords travel.keyWords}}{{/setKeyWords}}</li>
-    </ul>
-    <h6 class="card-title">{{travel.price}}€</h6>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    <a href="/travels/list" class="btn btn-secondary btn-sm text-uppercase">Volver a la lista</a>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="card m-2 w-100 h-300">
+        <div class="g-0">
+          <div class="row g-0">
+
+            <div class="col-7 travel-card-image center w-80" style="background-image: url({{travel.image}})">
+            </div>
+            <div class="col-5">
+              <div class="card-body">
+                <h5 class="card-title text-center fs-4 mt-0">{{travel.title}}</h5> 
+               <div class="separator-card"></div>
+               <ul>
+                  <li>Viaje en: {{travel.tripMode}}</li>
+                  <li>{{travel.duration}} días</li>
+                  <li>{{#setKeyWords travel.keyWords}}{{/setKeyWords}}</li>
+                </ul>
+                <p class="card-text text-start">{{travel.description}}</p>                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+<div class="row">
+    <div class="col-12">
+      <div class="card-hotel ml-1 w-100">
+        <div class="g-0">
+          <div class="row g-0">
+
+             <div class="col-7 travel-card-hotel-image center" style="background-image: url({{travel.hotel.image}})">
+            </div>
+            <div class="col-5">
+              <div class="card-body">
+                  <h5 class="card-title mt-0 text-wrap">{{travel.hotel.name}}</h5>
+                <p class="card-text text-start">{{travel.hotel.description}}</p>              
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="travel-price">Precio: {{travel.price}}€</div>
+  </div>
+<a href="/travels/list" class="btn btn-secondary btn-sm text-uppercase">Volver a la lista</a>
 </div>
