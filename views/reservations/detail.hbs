@@ -1,15 +1,18 @@
-<div class="breadcrumb-container">
+
+<div class="container my-5">
+    <div class="breadcrumb-container">
 
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Inicio</a></li>
             <li class="breadcrumb-item"><a href="../reservations/travel-finder.hbs">Descartar y reserva</a></li>
-            <li class="breadcrumb-item"><a href="../reservations/detail.hbs">Tu Mr Weekend</a></li>
+            <li class="breadcrumb-item active">Tu Mr Weekend</a></li>
           </ol>
         </nav>
       </div>
 
     <h3>DATOS DE LA RESERVA</h3>
+    <div class="separator-simple mx-auto"></div>
         
           <div class="row">
             
@@ -35,16 +38,51 @@
           </div>
 
 
+  <div class="row">
+    <div class="col-12">
+      <div class="card m-2 w-100 h-300">
+        <div class="g-0">
+          <div class="row g-0">
 
-<div class="card mb-3">  
-  <img src="{{travel.image}}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{travel.title}}</h5>
-    <p class="card-text">{{travel.description}}</p>
-    <ul>
-      <li>Viaje por: {{travel.tripMode}}</li>
-      <li>{{travel.duration}} días</li>
-      <li>{{#setKeyWords travel.keyWords}}{{/setKeyWords}}</li>
-    </ul>
+            <div class="col-7 travel-card-image center w-80" style="background-image: url({{travel.image}})">
+            </div>
+            <div class="col-5">
+              <div class="card-body">
+                <h5 class="card-title text-center fs-4 mt-0">{{travel.title}}</h5> 
+               <div class="separator-card"></div>
+               <ul>
+                  <li>Viaje en: {{travel.tripMode}}</li>
+                  <li>{{travel.duration}} días</li>
+                  <li>{{#setKeyWords travel.keyWords}}{{/setKeyWords}}</li>
+                </ul>
+                <p class="card-text text-start">{{travel.description}}</p>                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+<div class="row">
+    <div class="col-12">
+      <div class="card-hotel ml-1 w-100">
+        <div class="g-0">
+          <div class="row g-0">
+
+             <div class="col-7 travel-card-hotel-image center" style="background-image: url({{travel.hotel.image}})">
+            </div>
+            <div class="col-5">
+              <div class="card-body">
+                  <h5 class="card-title mt-0 text-wrap">{{travel.hotel.name}}</h5>
+                <p class="card-text text-start">{{travel.hotel.description}}</p>              
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<a href="/" class="btn btn-primary mb-4 mt-4 d-grid gap-2 col-2 mx-auto">Finalizar</a>
 </div>

@@ -1,47 +1,49 @@
 
-<div class="container">
+<div class="container my-5">
     <section>
       <div class="breadcrumb-container">
 
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="../reservations/travel-finder.hbs">Descartar y reserva</a></li>
+            <li class="breadcrumb-item active">Descartar y reserva</a></li>
           </ol>
         </nav>
       </div>
         
         <h3>DATOS DE LA RESERVA</h3>
-        <form class="row g m" action="/travels-finder" method="POST">
-          <div class="row">
-            <div class="col-md-2 mb-4">
+        <div class="separator-simple mx-auto"></div>
+        <form class="row g mb-6" action="/travels-finder" method="POST">
+          <div class="row mx-auto">
+            <div class="col-md-3 mb-4 mt-4">
               <label class="form-label">Viajeros</label>
               <input type="number" class="form-control" value="{{finder.travellers}}" readonly>
             </div>
 
-            <div class="col-md-2 mb-4">
+            <div class="col-md-3 mb-4 mt-4">
               <label class="form-label">Date</label>
               <input type="text" name="date" class="form-control" value="{{ finder.date }}" readonly>
             </div>
-             <div class="col-md-2 mb-4">
+             <div class="col-md-3 mb-4 mt-4">
               <label class="form-label">Aeropuerto</label>
               <input type="text" name="airport" class="form-control" value="{{ finder.airport }}" readonly>
             </div>
           </div>
 
-          <div class="row mb-4">
-            <div class="mb-2">
-              <h3>DESCARTA DESTINOS QUE NO DESEAS VISITAR</h3>
+          <div class="row mt-7">
+            <div class="mb-5 mt-3">
+              <h3>DESCARTA 3 DESTINOS QUE NO DESEAS VISITAR</h3>
+              <div class="separator-simple mx-auto"></div>
             </div>
             {{#each travels as |travel|}}
             <div class="col-3">
               <div class="form-check">
                 <input type="checkbox" id="travel-{{travel.id}}" class="form-check-input" name="travelChoices" value="{{ travel.id }}" checked>
                 <label class="form-check-label" for="travel-{{travel.id}}">
-                  <div class="card bg-dark text-white">
+                  <div class="card bg-dark border-warning">
                     <img src="{{travel.image}}" class="card-img" alt="...">
                     <div class="card-img-overlay">
-                      <h5 class="card-title">{{travel.location}}</h5>
+                      <h5 class="card-title bg-transparent">{{travel.location}}</h5>
                     </div>
                   </div>
                 </label>
