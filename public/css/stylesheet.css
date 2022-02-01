@@ -11,11 +11,18 @@
   box-shadow: 0px 2px 2px rgb(0 0 0 / 30%);
 }
 
+.card-city {
+  max-height: 278px;
+  font-size: 12px;
+  overflow: auto;
+}
+
 .card-hotel {
   max-height: 200px;
   font-size: 12px;
   overflow: auto;
   padding-left: 13px;
+  box-shadow: 0px 2px 2px rgb(0 0 0 / 30%);
 }
 
 .travel-card-hotel-image {
@@ -29,7 +36,6 @@ ul {
   display: inline-flex;
   width: 100%;
   justify-content: space-around;
-
 }
 
 .home {
@@ -48,6 +54,7 @@ ul {
   text-align: center;
   margin-bottom: 40px;
   text-shadow: 3px 3px 5px rgb(52, 54, 52);
+  margin-top: 50px;
 }
 
 .seleccionar-viajeros {
@@ -201,7 +208,7 @@ p {
   color:rgb(41, 43, 41);
   text-shadow: 0px 6px 6px rgb(249, 252, 249);
   text-align: center;
-  font-size: 1em;
+  font-size: 1.1em;
 } 
 
 .breadcrumb a {
@@ -211,10 +218,10 @@ p {
 
 
 .carousel-caption img {
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 180px;
   border-radius:100%;
-  box-shadow: 0 8px 5px -6px rgb(0 0 0 / 28%);
+  box-shadow: 0 8px 5px -6px rgb(0 0 0 / 38%);
 }
 
 h3 {
@@ -378,11 +385,23 @@ h6 {
 .travel-price {
   font-size: 20px;
   color:rgb(52, 54, 52);
-  text-align: end;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .bg-transparent {
   --bs-bg-opacity: 6;
   background-color: #ecedefa6!important;
   padding-top: 4px;
+}
+
+.included{
+  font-size: 14px;
+}
+
+.fa-lg {
+  font-size: 1.33333333em;
+  line-height: .75em;
+  vertical-align: -15%;
+  padding-right: 20px;
 }

@@ -1,22 +1,23 @@
 <div class="row justify-content-center">
-  <div class="col-12 col-sm-4">
-    <h4>Register</h4>
+  <div class="col-12 col-sm-4 pt-5">
+    <h3>Registro</h3>
+    <div class="separator-card mb-5"></div>
     <form action="/register" method="post">
 
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <label for="exampleInputEmail1" class="form-label">Nombre</label>
         <input type="text" class="form-control {{#if errors.name}}is-invalid{{/if}}" name="name" value="{{ user.name }}" placeholder="Type your name..." />
         <div class="invalid-feedback">{{ errors.name }}</div>
       </div>
 
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Interests</label>
+        <label for="exampleInputEmail1" class="form-label">Intereses</label>
         <input type="text" class="form-control {{#if errors.interests}}is-invalid{{/if}}" name="interests" value="{{ user.interests }}" placeholder="Interests..." />
         <div class="invalid-feedback">{{ errors.interests }}</div>
       </div>
 
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <label for="exampleInputEmail1" class="form-label">Email</label>
         <input type="email" class="form-control {{#if errors.email}}is-invalid{{/if}}" name="email" value="{{ user.email }}" placeholder="john.doe@example.org" />
         <div class="invalid-feedback">{{ errors.email }}</div>
       </div>
@@ -29,11 +30,11 @@
 
       <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        <label class="form-check-label" for="exampleCheck1">Clícame</label>
       </div>
       
       <div class="d-grid">
-        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="submit" class="btn btn-primary">Registrar</button>
         <hr>
         <a href="/login" class="btn btn-secondary btn-sm text-uppercase">Login</a>
       </div>

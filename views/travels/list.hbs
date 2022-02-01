@@ -13,17 +13,18 @@
               <div class="card-body">
                 <h5 class="card-title text-center fs-5 mt-0">{{travel.title}}</h5>
                 <div class="separator-card"></div> 
-            
-                <ul>
-                  <li></i>Viaje en: {{travel.tripMode}}</li>
-                  <li>{{travel.duration}} días</li>
-                  <li>{{#setKeyWords travel.keyWords}}{{/setKeyWords}}</li>
-                </ul>
 
-                  <h6 class="card-title"><i class="fa fa-bed fa-lg --fa-li-margin ml-34"></i>   {{travel.hotel.name}}</h6>
-                <div class="travel-price fs-6">Precio: {{travel.price}}€</div>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                <a href="/travels/{{travel.id}}/detail" class="btn btn-secondary btn-sm d-grid gap-2 text-align-center">Ver más</a>
+                <div class="row">
+                  <div class="included">
+                  <li><i class="fa fa-exchange fa-ls mx-2"></i>Viaje en: {{travel.tripMode}}</li>
+                  <li><i class="fa fa-dashcube fa-ls mx-2"></i>{{travel.duration}} días</li>
+                  <li><i class="fa fa-eye fa-ls mx-2"></i>{{#setKeyWords travel.keyWords}}{{/setKeyWords}}</li>
+                </div>
+                </div>
+                
+                  <h6 class="card-title mt-3"><i class="fa fa-bed fa-lg mr-2"></i>{{travel.hotel.name}}</h6>
+                <div class="travel-price fs-6 padding-right: 20px">Precio: {{travel.price}}€</div>
+                <a href="/travels/{{travel.id}}/detail" class="btn btn-secondary btn-sm gap-2 text-align-center position-absolute bottom-0 end-0">Ver más</a>
               </div>
             </div>
 

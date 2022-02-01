@@ -1,10 +1,12 @@
 <div class="row justify-content-center">
   <div class="col-12 col-sm-8">
-    <h3 class="mb-6 uppercase">CREAR VIAJE</h3>
+        
+    <h3 class="mb-6 uppercase mt-5">CREAR VIAJE</h3>
+    <div class="separator-simple mx-auto"></div>
     <form action="/travels" method="post" enctype="multipart/form-data">
 
       <div class="form-check mb-3">
-        <label for="exampleInputEmail1" class="form-check-label">Destinos</label><br>
+        <label for="destination" class="form-check-label my-2 mt-5">Destinos:</label><br>
         <input type="radio" class="form-check-input {{#if errors.destination}}is-invalid{{/if}}" name="destination" value="national">
         <label for="html">Nacionales</label><br>
         <input type="radio" class="form-check-input {{#if errors.destination}}is-invalid{{/if}}" name="destination" value="europe">

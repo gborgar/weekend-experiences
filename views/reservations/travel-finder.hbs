@@ -1,4 +1,3 @@
-
 <div class="container my-5">
     <section>
       <div class="breadcrumb-container">
@@ -12,27 +11,28 @@
       </div>
         
         <h3>DATOS DE LA RESERVA</h3>
-        <div class="separator-simple mx-auto"></div>
+         <div class="separator-card mb-5"></div>
+        
         <form class="row g mb-6" action="/travels-finder" method="POST">
-          <div class="row mx-auto">
+          <div class="row mx-auto justify-content-around">
             <div class="col-md-3 mb-4 mt-4">
-              <label class="form-label">Viajeros</label>
+              <label class="form-label">Viajeros</label><i class="fa fa-users fa-fw mx-3"></i>
               <input type="number" class="form-control" value="{{finder.travellers}}" readonly>
             </div>
 
             <div class="col-md-3 mb-4 mt-4">
-              <label class="form-label">Date</label>
+              <label class="form-label">Date</label><i class="fa fa-calendar-o fa-fw mx-3"></i> 
               <input type="text" name="date" class="form-control" value="{{ finder.date }}" readonly>
             </div>
              <div class="col-md-3 mb-4 mt-4">
-              <label class="form-label">Aeropuerto</label>
+              <label class="form-label">Aeropuerto</label><i class="fa fa-plane fa-lg mx-3"></i>
               <input type="text" name="airport" class="form-control" value="{{ finder.airport }}" readonly>
             </div>
           </div>
 
           <div class="row mt-7">
             <div class="mb-5 mt-3">
-              <h3>DESCARTA 3 DESTINOS QUE NO DESEAS VISITAR</h3>
+              <h3>Descarta 3 destinos que no deseas visitar</h3>
               <div class="separator-simple mx-auto"></div>
             </div>
             {{#each travels as |travel|}}
@@ -53,15 +53,15 @@
           </div>
 
           {{#for 0 finder.travellers 1}}
-            <div class="row mb-4">
+            <div class="row mb-5 my-5">
               <h4>VIAJERO {{this.pretty }}</h4>
 
-              <div class="col-md-6 mb-4">
+              <div class="col-md-6 mb-4 my-3">
                 <label class="form-label">Nombre</label>
                 <input type="text" name="travellers[{{ this.index }}][name]" class="form-control {{#if errors.name}}is-invalid{{/if}}" value="" required>
               </div>
 
-              <div class="col-md-6 mb-4">
+              <div class="col-md-6 mb-4 my-3">
                 <label class="form-label">Apellidos</label>
                 <input type="text" name="travellers[{{ this.index }}][lastname]" class="form-control {{#if errors.lastname}}is-invalid{{/if}}" value="" required>
               </div>
